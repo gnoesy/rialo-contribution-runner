@@ -1,0 +1,57 @@
+{
+  "checkedAt": "2026-10-18",
+  "method": "Live public X profile DOM and original related post pages; visible dates, not search crawl dates. Public timeline only; login-only posts and replies unverified.",
+  "latestVisibleNonPinnedPosts": [
+    {
+      "url": "https://x.com/RialoHQ/status/2095183663780528299",
+      "displayedDate": "2026-09-03",
+      "finding": "Institutional adoption interview; no new task or reward terms."
+    },
+    {
+      "url": "https://x.com/Subzero_Labs/status/2103477533580697614",
+      "displayedDate": "2026-09-25",
+      "finding": "Tokenized securities infrastructure; no participation route."
+    },
+    {
+      "url": "https://x.com/itachee_x/status/2110109214916108692",
+      "displayedDate": "2026-10-14",
+      "finding": "Image-only football post; no Rialo task."
+    },
+    {
+      "url": "https://x.com/firearrowmage/status/2030056642113589608",
+      "displayedDate": "2026-03-07",
+      "finding": "Continuous asset-data streams; no current participation terms."
+    },
+    {
+      "url": "https://x.com/0xyoungin/status/1998556363031720225",
+      "displayedDate": "2025-12-10",
+      "finding": "Rialo user-experience interview; no task or reward terms."
+    }
+  ],
+  "relatedPosts": [
+    {
+      "url": "https://x.com/itachee_x/status/2077422983354741114",
+      "displayedDate": "2026-07-16",
+      "finding": "Acknowledges early AGP testers; past recognition, not a current open campaign."
+    },
+    {
+      "url": "https://x.com/itachee_x/status/2077033741478703296",
+      "displayedDate": "2026-07-14",
+      "finding": "Quoted original announces AGP official URL and thanks builders who tested behind the scenes."
+    },
+    {
+      "url": "https://x.com/RialoHQ/status/2093441987269550393",
+      "displayedDate": "2026-08-29",
+      "finding": "Retroactive points for prior building/testing/contributions; does not promise points for a new bot or repeated transactions."
+    }
+  ],
+  "docs": {
+    "protected": "https://docs.rialo.io/",
+    "status": "Cloudflare Access required; protected content unverified",
+    "publicAlternatives": [
+      "https://registry.npmjs.org/@rialo%2Fts-cdk",
+      "https://docs.rs/rialo-cdk/latest/rialo_cdk/"
+    ]
+  },
+  "decision": "Build reproducible SDK compatibility tests and a public availability monitor; perform one bounded Devnet canary, watch AGP openings, gate ERMAC until actual on-chain dependencies exist. Do not automate bets or assume rewards."
+}

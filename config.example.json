@@ -1,0 +1,9 @@
+{
+  "network": "devnet",
+  "rpcUrl": "https://devnet.rialo.io:4101",
+  "publicKey": "YOUR_EXISTING_DEVNET_PUBLIC_KEY",
+  "keypairPath": "/absolute/path/to/existing/devnet.json",
+  "faucetKelvin": 100000000,
+  "maxFeeKelvin": 1000000,
+  "autoCreateFeed": false
+}
