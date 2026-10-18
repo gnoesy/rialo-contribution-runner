@@ -1,0 +1,106 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-10-18T02:43:26.261Z",
+  "networks": [
+    {
+      "url": "https://devnet.rialo.io:4101",
+      "health": "ok",
+      "height": "2776778",
+      "configHash": "340350889361030849",
+      "latencyMs": 3778,
+      "programs": {
+        "medianAggregatorId": {
+          "address": "M4tvfJkVtzhBozkywmG45xfvBJhVqJghqSuxjEKY6Mx",
+          "state": "absent"
+        },
+        "registryProgramId": {
+          "address": "3nmnQVAgKaBrWiauqdEwoSqa8rVACjEbZVcGH5VeVn62",
+          "state": "absent"
+        },
+        "subscriberProgramId": {
+          "address": "95uDFDmcDHB32zpBzfaaXhmVNeJ5PAt2FaFw4nPknuho",
+          "state": "absent"
+        },
+        "globalIndex": {
+          "address": "3UBDAjfooL8e64tTRtJAgP9RXj15qfZx1TZ2faLKz35y",
+          "state": "absent"
+        }
+      }
+    },
+    {
+      "url": "https://devnet.rialo.io",
+      "health": "ok",
+      "height": "2776763",
+      "configHash": "340350889361030849",
+      "latencyMs": 3686,
+      "programs": {
+        "medianAggregatorId": {
+          "address": "M4tvfJkVtzhBozkywmG45xfvBJhVqJghqSuxjEKY6Mx",
+          "state": "absent"
+        },
+        "registryProgramId": {
+          "address": "3nmnQVAgKaBrWiauqdEwoSqa8rVACjEbZVcGH5VeVn62",
+          "state": "absent"
+        },
+        "subscriberProgramId": {
+          "address": "95uDFDmcDHB32zpBzfaaXhmVNeJ5PAt2FaFw4nPknuho",
+          "state": "absent"
+        },
+        "globalIndex": {
+          "address": "3UBDAjfooL8e64tTRtJAgP9RXj15qfZx1TZ2faLKz35y",
+          "state": "absent"
+        }
+      }
+    },
+    {
+      "url": "https://testnet.rialo.io:4101",
+      "health": "ok",
+      "height": "1654180",
+      "configHash": "3882139547858051996",
+      "latencyMs": 1779,
+      "programs": {
+        "medianAggregatorId": {
+          "address": "M4tvfJkVtzhBozkywmG45xfvBJhVqJghqSuxjEKY6Mx",
+          "state": "absent"
+        },
+        "registryProgramId": {
+          "address": "3nmnQVAgKaBrWiauqdEwoSqa8rVACjEbZVcGH5VeVn62",
+          "state": "absent"
+        },
+        "subscriberProgramId": {
+          "address": "95uDFDmcDHB32zpBzfaaXhmVNeJ5PAt2FaFw4nPknuho",
+          "state": "absent"
+        },
+        "globalIndex": {
+          "address": "3UBDAjfooL8e64tTRtJAgP9RXj15qfZx1TZ2faLKz35y",
+          "state": "absent"
+        }
+      }
+    }
+  ],
+  "agp": {
+    "state": "verified_public_api",
+    "upcomingCount": 0
+  },
+  "sdk": {
+    "state": "verified_registry",
+    "installed": "0.18.1",
+    "latest": "0.18.1",
+    "publishedAt": "2026-08-18T22:38:00.567Z"
+  },
+  "ermacBundle": {
+    "state": "verified_public_asset",
+    "url": "https://ermac.rialo.io/assets/frost-public-key-tgtsfZiz.js",
+    "sha256": "2e5fc8a9ab654d4ca2067c70d14789da15e17e7656984fa9ff5d9560396890ac",
+    "matchesPinned": true
+  },
+  "canary": {
+    "state": "verified",
+    "signature": "5UD6CupQHvQhKzNuLszdxyvwjijtHsv3ZnM6oN5JBSgswGMhsxen9LTT5omXc48v8DA9Kvn47PsDh9B9WxkFKBSc",
+    "estimatedFeeKelvin": "0"
+  },
+  "participation": {
+    "state": "blocked_programs_unavailable"
+  },
+  "rewardStatus": "unverified: test tokens and SDK checks are not Rialo Points or an airdrop entitlement"
+}
