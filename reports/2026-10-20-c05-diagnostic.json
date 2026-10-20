@@ -1,0 +1,154 @@
+{
+  "unit": "C05",
+  "checkedAt": "2026-10-20T10:08:36.945Z",
+  "tests": {
+    "command": "node --test tests/*.test.mjs",
+    "passed": 41,
+    "failed": 0,
+    "network": "offline fixtures"
+  },
+  "liveDiagnostics": [
+    {
+      "rpc": "https://devnet.rialo.io:4101",
+      "exitCode": 1,
+      "inputMode": "live_read",
+      "schemaVersion": 1,
+      "readOnly": true,
+      "observedAt": "2026-10-20T10:08:35.218Z",
+      "provenance": null,
+      "ready": false,
+      "checks": [
+        {
+          "id": "rpc",
+          "state": "pass",
+          "detail": "Only the explicit Devnet RPC allowlist is supported",
+          "observed": "https://devnet.rialo.io:4101"
+        },
+        {
+          "id": "health",
+          "state": "pass",
+          "detail": "RPC reports healthy"
+        },
+        {
+          "id": "protocol",
+          "state": "pass",
+          "detail": "Public helper hash and app entrypoint match the pinned protocol",
+          "expectedSha256": "2e5fc8a9ab654d4ca2067c70d14789da15e17e7656984fa9ff5d9560396890ac",
+          "observedSha256": "2e5fc8a9ab654d4ca2067c70d14789da15e17e7656984fa9ff5d9560396890ac"
+        },
+        {
+          "id": "medianAggregatorId",
+          "state": "missing",
+          "detail": "RPC reported this account does not exist",
+          "address": "M4tvfJkVtzhBozkywmG45xfvBJhVqJghqSuxjEKY6Mx"
+        },
+        {
+          "id": "registryProgramId",
+          "state": "missing",
+          "detail": "RPC reported this account does not exist",
+          "address": "3nmnQVAgKaBrWiauqdEwoSqa8rVACjEbZVcGH5VeVn62"
+        },
+        {
+          "id": "subscriberProgramId",
+          "state": "missing",
+          "detail": "RPC reported this account does not exist",
+          "address": "95uDFDmcDHB32zpBzfaaXhmVNeJ5PAt2FaFw4nPknuho"
+        },
+        {
+          "id": "globalRegistry",
+          "state": "missing",
+          "detail": "RPC reported this account does not exist",
+          "address": "3UBDAjfooL8e64tTRtJAgP9RXj15qfZx1TZ2faLKz35y"
+        },
+        {
+          "id": "globalRegistryOwner",
+          "state": "unknown",
+          "detail": "Registry ownership cannot be established",
+          "expectedOwner": "3nmnQVAgKaBrWiauqdEwoSqa8rVACjEbZVcGH5VeVn62",
+          "observedOwner": null
+        }
+      ],
+      "blockers": [
+        "medianAggregatorId",
+        "registryProgramId",
+        "subscriberProgramId",
+        "globalRegistry",
+        "globalRegistryOwner"
+      ],
+      "limitations": "Read-only prerequisites, not feed execution, authorization, contribution acceptance or reward eligibility. Snapshot input is caller-supplied historical evidence."
+    },
+    {
+      "rpc": "https://devnet.rialo.io",
+      "exitCode": 1,
+      "inputMode": "live_read",
+      "schemaVersion": 1,
+      "readOnly": true,
+      "observedAt": "2026-10-20T10:08:36.938Z",
+      "provenance": null,
+      "ready": false,
+      "checks": [
+        {
+          "id": "rpc",
+          "state": "pass",
+          "detail": "Only the explicit Devnet RPC allowlist is supported",
+          "observed": "https://devnet.rialo.io"
+        },
+        {
+          "id": "health",
+          "state": "pass",
+          "detail": "RPC reports healthy"
+        },
+        {
+          "id": "protocol",
+          "state": "pass",
+          "detail": "Public helper hash and app entrypoint match the pinned protocol",
+          "expectedSha256": "2e5fc8a9ab654d4ca2067c70d14789da15e17e7656984fa9ff5d9560396890ac",
+          "observedSha256": "2e5fc8a9ab654d4ca2067c70d14789da15e17e7656984fa9ff5d9560396890ac"
+        },
+        {
+          "id": "medianAggregatorId",
+          "state": "missing",
+          "detail": "RPC reported this account does not exist",
+          "address": "M4tvfJkVtzhBozkywmG45xfvBJhVqJghqSuxjEKY6Mx"
+        },
+        {
+          "id": "registryProgramId",
+          "state": "missing",
+          "detail": "RPC reported this account does not exist",
+          "address": "3nmnQVAgKaBrWiauqdEwoSqa8rVACjEbZVcGH5VeVn62"
+        },
+        {
+          "id": "subscriberProgramId",
+          "state": "missing",
+          "detail": "RPC reported this account does not exist",
+          "address": "95uDFDmcDHB32zpBzfaaXhmVNeJ5PAt2FaFw4nPknuho"
+        },
+        {
+          "id": "globalRegistry",
+          "state": "missing",
+          "detail": "RPC reported this account does not exist",
+          "address": "3UBDAjfooL8e64tTRtJAgP9RXj15qfZx1TZ2faLKz35y"
+        },
+        {
+          "id": "globalRegistryOwner",
+          "state": "unknown",
+          "detail": "Registry ownership cannot be established",
+          "expectedOwner": "3nmnQVAgKaBrWiauqdEwoSqa8rVACjEbZVcGH5VeVn62",
+          "observedOwner": null
+        }
+      ],
+      "blockers": [
+        "medianAggregatorId",
+        "registryProgramId",
+        "subscriberProgramId",
+        "globalRegistry",
+        "globalRegistryOwner"
+      ],
+      "limitations": "Read-only prerequisites, not feed execution, authorization, contribution acceptance or reward eligibility. Snapshot input is caller-supplied historical evidence."
+    }
+  ],
+  "ledgerUnchanged": true,
+  "newTransactions": 0,
+  "contributionAcceptance": "unverified",
+  "rewardStatus": "unverified"
+}

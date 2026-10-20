@@ -74,6 +74,40 @@ read failure nor a successful receipt proves finality, contribution acceptance
 or rewards. [C04 verification](reports/2026-10-20-c04-inspection.json) records the
 live observation separately from the offline tests.
 
+### Diagnose ERMAC prerequisites without a wallet
+
+```sh
+npm run --silent diagnose:ermac -- --rpc https://devnet.rialo.io:4101
+# Deterministic offline example: synthetic readiness, not a live deployment
+npm run --silent diagnose:ermac -- --snapshot tests/fixtures/ermac-ready-synthetic.json
+```
+
+The live command checks the selected allowlisted Devnet endpoint and the pinned
+public ERMAC asset. Its JSON lists each prerequisite separately:
+
+| Check | Non-passing result | Meaning / next step |
+| --- | --- | --- |
+| RPC address / health | `address_mismatch`, `unknown`, `unhealthy` | Use an allowed endpoint; investigate connectivity. |
+| App protocol | `unknown`, `mismatch` | Public asset unavailable or hash/entrypoint changed; review the public protocol before considering a write. |
+| Three programs | `missing` | RPC reports the expected account absent; wait for official deployment information. |
+| Three programs | `not_executable` | Account exists but is not an executable program. |
+| Program metadata | `unknown`, `address_mismatch` | Lookup/metadata unavailable or observation for the wrong address; do not infer absence. |
+| Global registry | `missing`, `unknown`, `address_mismatch` | Registry presence at the expected derived address is not established. |
+| Registry owner | `wrong_owner`, `unknown` | Owner differs from the registry program, or ownership cannot be checked. |
+
+Exit 0 means all **listed prerequisites** pass, exit 1 means at least one is
+blocked/unknown, and exit 2 means invalid/unreadable command input. An absent
+registry also has unknown ownership; these are separate checks, not two
+transactions. The command does not read wallet configuration or ledger state,
+sign, create accounts, initialize the registry, request a faucet, or change the
+live worker. Readiness does not guarantee feed execution or eligibility.
+
+`--snapshot` accepts `{checkedAt, network, bundle}` observations in the same
+shape as the fixture. Its output is explicitly labelled `supplied_snapshot`;
+it does not refresh the observations or establish that caller-supplied data is
+authentic. [C05 verification](reports/2026-10-20-c05-diagnostic.json) separates
+the offline synthetic tests from the actual live diagnostic results.
+
 ## Optional bounded Devnet integration
 
 Copy `config.example.json` to ignored `config.local.json` and enter an **existing** development wallet path and its public address. The original 0600 key file is read only in memory. Neither keys nor raw signed transactions are written into reports or uploaded.

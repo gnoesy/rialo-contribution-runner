@@ -1,0 +1,20 @@
+{
+  "provenance": "Synthetic all-ready fixture; not evidence of a live ERMAC deployment.",
+  "checkedAt": null,
+  "network": {
+    "url": "https://devnet.rialo.io:4101",
+    "health": "ok",
+    "programs": {
+      "medianAggregatorId": {"address": "M4tvfJkVtzhBozkywmG45xfvBJhVqJghqSuxjEKY6Mx", "state": "present", "executable": true},
+      "registryProgramId": {"address": "3nmnQVAgKaBrWiauqdEwoSqa8rVACjEbZVcGH5VeVn62", "state": "present", "executable": true},
+      "subscriberProgramId": {"address": "95uDFDmcDHB32zpBzfaaXhmVNeJ5PAt2FaFw4nPknuho", "state": "present", "executable": true},
+      "globalIndex": {"address": "3UBDAjfooL8e64tTRtJAgP9RXj15qfZx1TZ2faLKz35y", "state": "present", "owner": "3nmnQVAgKaBrWiauqdEwoSqa8rVACjEbZVcGH5VeVn62"}
+    }
+  },
+  "bundle": {
+    "state": "verified_public_asset",
+    "url": "https://ermac.rialo.io/assets/frost-public-key-tgtsfZiz.js",
+    "sha256": "2e5fc8a9ab654d4ca2067c70d14789da15e17e7656984fa9ff5d9560396890ac",
+    "matchesPinned": true
+  }
+}
