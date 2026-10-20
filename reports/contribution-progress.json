@@ -2,19 +2,19 @@
   "schemaVersion": 1,
   "cycle": 1,
   "title": "Rialo 개발자 도구 기여",
-  "updatedAt": "2026-10-20T08:17:58.159Z",
+  "updatedAt": "2026-10-20T09:15:28.715Z",
   "cadence": {
     "timezone": "Asia/Seoul",
     "minute": 10,
     "targetUnitsPerRun": 1,
     "targetPercentagePoints": 10
   },
-  "completedUnits": 3,
+  "completedUnits": 4,
   "totalUnits": 10,
-  "progressPercent": 30,
+  "progressPercent": 40,
   "contributionAcceptance": "unverified",
   "rewardStatus": "unverified",
-  "nextTaskId": "C04",
+  "nextTaskId": "C05",
   "tasks": [
     {
       "id": "C01",
@@ -62,8 +62,15 @@
       "id": "C04",
       "title": "읽기 전용 영수증 조회 CLI",
       "weight": 10,
-      "status": "queued",
-      "acceptance": "Explicit allowlisted Devnet URL and signature input; normalized output and nonzero failure status; tests prove arbitrary RPC URLs are rejected; published usage example."
+      "status": "done",
+      "acceptance": "Explicit allowlisted Devnet URL and signature input; normalized output and nonzero failure status; tests prove arbitrary RPC URLs are rejected; published usage example.",
+      "completedAt": "2026-10-20T09:15:28.715Z",
+      "evidence": {
+        "commitUrl": "https://github.com/gnoesy/rialo-contribution-runner/commit/876b96967d5fc3d9183a08c68f767ad759ca5bad",
+        "artifactUrl": "https://github.com/gnoesy/rialo-contribution-runner/blob/876b96967d5fc3d9183a08c68f767ad759ca5bad/reports/2026-10-20-c04-inspection.json",
+        "tests": "33/33 offline tests passed; both Devnet endpoints returned HTTP 404 / RPC -32001, correctly classified with CLI exit 1; no new transactions",
+        "testCount": 33
+      }
     },
     {
       "id": "C05",
