@@ -2,19 +2,19 @@
   "schemaVersion": 1,
   "cycle": 1,
   "title": "Rialo 개발자 도구 기여",
-  "updatedAt": "2026-10-20T06:10:17.914Z",
+  "updatedAt": "2026-10-20T07:15:56.249Z",
   "cadence": {
     "timezone": "Asia/Seoul",
     "minute": 10,
     "targetUnitsPerRun": 1,
     "targetPercentagePoints": 10
   },
-  "completedUnits": 1,
+  "completedUnits": 2,
   "totalUnits": 10,
-  "progressPercent": 10,
+  "progressPercent": 20,
   "contributionAcceptance": "unverified",
   "rewardStatus": "unverified",
-  "nextTaskId": "C02",
+  "nextTaskId": "C03",
   "tasks": [
     {
       "id": "C01",
@@ -34,8 +34,15 @@
       "id": "C02",
       "title": "거래 영수증 필드 검증",
       "weight": 10,
-      "status": "queued",
-      "acceptance": "Reject malformed, negative, fractional or missing block/fee/validFrom values; recorded camelCase and snake_case receipts still pass; focused tests and explanation are public."
+      "status": "done",
+      "acceptance": "Reject malformed, negative, fractional or missing block/fee/validFrom values; recorded camelCase and snake_case receipts still pass; focused tests and explanation are public.",
+      "completedAt": "2026-10-20T07:15:56.249Z",
+      "evidence": {
+        "commitUrl": "https://github.com/gnoesy/rialo-contribution-runner/commit/3bff645197a4aa7bca5f7c0a1faf67176e79b421",
+        "artifactUrl": "https://github.com/gnoesy/rialo-contribution-runner/blob/3bff645197a4aa7bca5f7c0a1faf67176e79b421/reports/2026-10-20-c02-validation.json",
+        "tests": "20/20 tests passed; original Devnet receipt read successfully without a new transaction",
+        "testCount": 20
+      }
     },
     {
       "id": "C03",
