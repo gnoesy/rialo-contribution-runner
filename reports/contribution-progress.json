@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "cycle": 1,
+  "title": "Rialo 개발자 도구 기여",
+  "updatedAt": "2026-10-20T06:10:17.914Z",
+  "cadence": {
+    "timezone": "Asia/Seoul",
+    "minute": 10,
+    "targetUnitsPerRun": 1,
+    "targetPercentagePoints": 10
+  },
+  "completedUnits": 1,
+  "totalUnits": 10,
+  "progressPercent": 10,
+  "contributionAcceptance": "unverified",
+  "rewardStatus": "unverified",
+  "nextTaskId": "C02",
+  "tasks": [
+    {
+      "id": "C01",
+      "title": "SDK 오류 재현 CLI",
+      "weight": 10,
+      "status": "done",
+      "acceptance": "One documented command reproduces the pinned SDK error and shows the adapter result; CLI test passes; source is public.",
+      "completedAt": "2026-10-20T06:10:17.914Z",
+      "evidence": {
+        "commitUrl": "https://github.com/gnoesy/rialo-contribution-runner/commit/0834700079ed6cd547235e6707f6acb3f3027623",
+        "artifactUrl": "https://github.com/gnoesy/rialo-contribution-runner/blob/0834700079ed6cd547235e6707f6acb3f3027623/src/reproduce-receipt.mjs",
+        "tests": "12/12 node tests passed; standalone CLI returned passed=true",
+        "testCount": 12
+      }
+    },
+    {
+      "id": "C02",
+      "title": "거래 영수증 필드 검증",
+      "weight": 10,
+      "status": "queued",
+      "acceptance": "Reject malformed, negative, fractional or missing block/fee/validFrom values; recorded camelCase and snake_case receipts still pass; focused tests and explanation are public."
+    },
+    {
+      "id": "C03",
+      "title": "실패 거래 재현 사례",
+      "weight": 10,
+      "status": "queued",
+      "acceptance": "Fixtures cover successful receipt, execution failure, missing transaction and signature mismatch; CLI/report distinguishes these accurately; no signing; public tests."
+    },
+    {
+      "id": "C04",
+      "title": "읽기 전용 영수증 조회 CLI",
+      "weight": 10,
+      "status": "queued",
+      "acceptance": "Explicit allowlisted Devnet URL and signature input; normalized output and nonzero failure status; tests prove arbitrary RPC URLs are rejected; published usage example."
+    },
+    {
+      "id": "C05",
+      "title": "ERMAC 선행 조건 진단",
+      "weight": 10,
+      "status": "queued",
+      "acceptance": "Public command explains each missing, unknown, non-executable or wrong-owner prerequisite separately; fixture tests; no creation or signing; public evidence."
+    },
+    {
+      "id": "C06",
+      "title": "ERMAC 명령 직렬화 검증",
+      "weight": 10,
+      "status": "queued",
+      "acceptance": "Compare serialized instruction layout against the pinned public app with deterministic fixtures; negative cases for changed hash or invalid inputs; public reproducible report, without claiming live feed success."
+    },
+    {
+      "id": "C07",
+      "title": "AGP 일정 변경 감지",
+      "weight": 10,
+      "status": "queued",
+      "acceptance": "Fixture-driven added/removed/changed schedule comparison; empty agenda distinguished from fetch failure; no registration/betting; public command and tests."
+    },
+    {
+      "id": "C08",
+      "title": "깨끗한 환경의 자동 테스트",
+      "weight": 10,
+      "status": "queued",
+      "acceptance": "GitHub workflow runs offline tests on clean Node 22 install with no secrets/wallet/network writes; actual successful run URL recorded. Existing live worker stays untouched."
+    },
+    {
+      "id": "C09",
+      "title": "한·영 개발자 가이드와 접수 경로",
+      "weight": 10,
+      "status": "queued",
+      "acceptance": "English/Korean guide verified from a clean checkout; accurate supported/unsupported operations; official submission/contact routes checked with URLs and dates, inaccessible routes labelled; no messages sent."
+    },
+    {
+      "id": "C10",
+      "title": "버전별 개발 도구 배포",
+      "weight": 10,
+      "status": "queued",
+      "acceptance": "Review all units, run relevant suite in clean checkout, publish reproducible version/tag and changelog in the existing repository, confirm remote artifacts; document remaining upstream acceptance and reward uncertainty."
+    }
+  ]
+}
