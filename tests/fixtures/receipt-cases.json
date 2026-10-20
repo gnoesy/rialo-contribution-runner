@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 1,
+  "provenance": "The success case uses canary-rpc.json recorded on 2026-10-18. The RPC transaction-not-found envelope was observed on 2026-10-20 (HTTP 404). Other modified/error cases are synthetic, not observed chain failures.",
+  "cases": [
+    {
+      "id": "success",
+      "expected": "execution_succeeded",
+      "source": "recorded"
+    },
+    {
+      "id": "execution-error",
+      "expected": "execution_failed",
+      "source": "synthetic",
+      "metaErr": {
+        "InstructionError": [
+          0,
+          {
+            "Custom": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "missing-transaction",
+      "expected": "not_found",
+      "source": "synthetic",
+      "response": {
+        "jsonrpc": "2.0",
+        "id": 1,
+        "result": null
+      }
+    },
+    {
+      "id": "signature-mismatch",
+      "expected": "signature_mismatch",
+      "source": "synthetic",
+      "expectedSignature": "not-the-recorded-signature"
+    },
+    {
+      "id": "rpc-error",
+      "expected": "rpc_error",
+      "source": "synthetic",
+      "response": {
+        "jsonrpc": "2.0",
+        "id": 1,
+        "error": {
+          "code": -32603,
+          "message": "Synthetic RPC error"
+        }
+      }
+    },
+    {
+      "id": "missing-execution-result",
+      "expected": "invalid_receipt",
+      "source": "synthetic",
+      "omitMetaErr": true
+    },
+    {
+      "id": "observed-rpc-transaction-not-found",
+      "expected": "rpc_error",
+      "source": "observed_read_error",
+      "observedAt": "2026-10-20T08:16:32.554Z",
+      "httpStatus": 404,
+      "response": {
+        "jsonrpc": "2.0",
+        "id": 1,
+        "error": {
+          "code": -32001,
+          "message": "Transaction not found for signature: 5UD6CupQHvQhKzNuLszdxyvwjijtHsv3ZnM6oN5JBSgswGMhsxen9LTT5omXc48v8DA9Kvn47PsDh9B9WxkFKBSc",
+          "data": {
+            "details": "Transaction not found for signature: 5UD6CupQHvQhKzNuLszdxyvwjijtHsv3ZnM6oN5JBSgswGMhsxen9LTT5omXc48v8DA9Kvn47PsDh9B9WxkFKBSc"
+          }
+        }
+      }
+    }
+  ]
+}

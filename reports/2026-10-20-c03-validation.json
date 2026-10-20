@@ -1,0 +1,46 @@
+{
+  "unit": "C03",
+  "checkedAt": "2026-10-20T08:17:55.892Z",
+  "tests": {
+    "command": "node --test tests/*.test.mjs",
+    "passed": 25,
+    "failed": 0
+  },
+  "fixtureCases": 7,
+  "liveRead": {
+    "state": "unverified",
+    "checkedAt": "2026-10-20T08:16:32.554Z",
+    "findings": [
+      {
+        "endpoint": "https://devnet.rialo.io:4101",
+        "method": "getHealth",
+        "httpStatus": 200,
+        "result": "ok"
+      },
+      {
+        "endpoint": "https://devnet.rialo.io:4101",
+        "method": "getTransaction",
+        "httpStatus": 404,
+        "result": "RPC -32001 Transaction not found"
+      },
+      {
+        "endpoint": "https://devnet.rialo.io",
+        "method": "getHealth",
+        "httpStatus": 200,
+        "result": "ok"
+      },
+      {
+        "endpoint": "https://devnet.rialo.io",
+        "method": "getTransaction",
+        "httpStatus": 404,
+        "result": "RPC -32001 Transaction not found"
+      }
+    ]
+  },
+  "newTransactions": 0,
+  "limitations": [
+    "Five failure cases are synthetic; one RPC error was observed.",
+    "The previously verified canary is preserved; current receipt lookup is unverified.",
+    "Receipt classification is not finality or reward eligibility."
+  ]
+}

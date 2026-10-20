@@ -1,0 +1,74 @@
+{
+  "schemaVersion": 1,
+  "mode": "offline_outcome_fixtures",
+  "provenance": "The success case uses canary-rpc.json recorded on 2026-10-18. The RPC transaction-not-found envelope was observed on 2026-10-20 (HTTP 404). Other modified/error cases are synthetic, not observed chain failures.",
+  "transactionsSubmitted": 0,
+  "publicNetworkRequests": 0,
+  "cases": [
+    {
+      "id": "success",
+      "source": "recorded",
+      "expected": "execution_succeeded",
+      "actual": "execution_succeeded",
+      "passed": true,
+      "executionError": null
+    },
+    {
+      "id": "execution-error",
+      "source": "synthetic",
+      "expected": "execution_failed",
+      "actual": "execution_failed",
+      "passed": true,
+      "executionError": {
+        "InstructionError": [
+          0,
+          {
+            "Custom": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "missing-transaction",
+      "source": "synthetic",
+      "expected": "not_found",
+      "actual": "not_found",
+      "passed": true,
+      "executionError": null
+    },
+    {
+      "id": "signature-mismatch",
+      "source": "synthetic",
+      "expected": "signature_mismatch",
+      "actual": "signature_mismatch",
+      "passed": true,
+      "executionError": null
+    },
+    {
+      "id": "rpc-error",
+      "source": "synthetic",
+      "expected": "rpc_error",
+      "actual": "rpc_error",
+      "passed": true,
+      "executionError": null
+    },
+    {
+      "id": "missing-execution-result",
+      "source": "synthetic",
+      "expected": "invalid_receipt",
+      "actual": "invalid_receipt",
+      "passed": true,
+      "executionError": null
+    },
+    {
+      "id": "observed-rpc-transaction-not-found",
+      "source": "observed_read_error",
+      "expected": "rpc_error",
+      "actual": "rpc_error",
+      "passed": true,
+      "executionError": null
+    }
+  ],
+  "passed": true,
+  "limitation": "Synthetic failure cases test classification; not evidence of real failed transactions, finality or rewards."
+}

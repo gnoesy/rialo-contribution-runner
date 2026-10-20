@@ -33,6 +33,19 @@ npm run reproduce:receipt
 
 This serves the recorded Devnet response on loopback, reproduces the `@rialo/ts-cdk@0.18.1` parsing failure, and prints the successful normalized adapter receipt as JSON. It exits nonzero if the expected result cannot be reproduced. It needs no wallet, faucet or public RPC connection. The fixture is historical evidence, not a fresh network check.
 
+### Distinguish receipt outcomes offline
+
+```sh
+npm run reproduce:outcomes
+```
+
+This prints seven labelled fixture cases: recorded successful execution, synthetic
+execution failure, transaction not found, signature mismatch, RPC error and
+missing execution metadata, and an observed RPC transaction-not-found error. Exit zero means the **fixture suite** behaved as
+expected, not that every simulated transaction succeeded. Failure cases were
+constructed for testing except the explicitly labelled RPC read error; none is a claim of an observed failed transaction.
+See [outcome semantics and limits](reports/2026-10-20-receipt-outcomes.md).
+
 ## Optional bounded Devnet integration
 
 Copy `config.example.json` to ignored `config.local.json` and enter an **existing** development wallet path and its public address. The original 0600 key file is read only in memory. Neither keys nor raw signed transactions are written into reports or uploaded.
