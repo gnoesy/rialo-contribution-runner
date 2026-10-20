@@ -2,16 +2,16 @@
   "schemaVersion": 1,
   "cycle": 1,
   "title": "Rialo 개발자 도구 기여",
-  "updatedAt": "2026-10-20T12:18:04.931Z",
+  "updatedAt": "2026-10-20T13:14:10.997Z",
   "cadence": {
     "timezone": "Asia/Seoul",
     "minute": 10,
     "targetUnitsPerRun": 1,
     "targetPercentagePoints": 10
   },
-  "completedUnits": 7,
+  "completedUnits": 8,
   "totalUnits": 10,
-  "progressPercent": 70,
+  "progressPercent": 80,
   "contributionAcceptance": "unverified",
   "rewardStatus": "unverified",
   "nextTaskId": "C08",
@@ -118,22 +118,41 @@
       "id": "C08",
       "title": "깨끗한 환경의 자동 테스트",
       "weight": 10,
-      "status": "queued",
-      "acceptance": "GitHub workflow runs offline tests on clean Node 22 install with no secrets/wallet/network writes; actual successful run URL recorded. Existing live worker stays untouched."
+      "status": "blocked",
+      "acceptance": "GitHub workflow runs offline tests on clean Node 22 install with no secrets/wallet/network writes; actual successful run URL recorded. Existing live worker stays untouched.",
+      "blocker": {
+        "checkedAt": "2026-10-20T13:14:10.997Z",
+        "reason": "GitHub rejected workflow creation because current OAuth connection lacks workflow scope.",
+        "resolution": "User authorization for workflow-write access is required; local implementation and tests are preserved. No successful GitHub CI run yet."
+      }
     },
     {
       "id": "C09",
       "title": "한·영 개발자 가이드와 접수 경로",
       "weight": 10,
-      "status": "queued",
-      "acceptance": "English/Korean guide verified from a clean checkout; accurate supported/unsupported operations; official submission/contact routes checked with URLs and dates, inaccessible routes labelled; no messages sent."
+      "status": "done",
+      "acceptance": "English/Korean guide verified from a clean checkout; accurate supported/unsupported operations; official submission/contact routes checked with URLs and dates, inaccessible routes labelled; no messages sent.",
+      "completedAt": "2026-10-20T13:14:10.997Z",
+      "evidence": {
+        "commitUrl": "https://github.com/gnoesy/rialo-contribution-runner/commit/95faa5a11ba417c92d3f13d19d3e3711cf069b51",
+        "artifactUrl": "https://github.com/gnoesy/rialo-contribution-runner/blob/95faa5a11ba417c92d3f13d19d3e3711cf069b51/reports/2026-10-20-c09-quickstart.json",
+        "tests": "Clean public clone on Node 22.22.0: 57/57 tests and five documented offline CLI examples passed; official entry/contact URLs checked with access limits; no messages sent",
+        "testCount": 57
+      }
     },
     {
       "id": "C10",
       "title": "버전별 개발 도구 배포",
       "weight": 10,
-      "status": "queued",
-      "acceptance": "Review all units, run relevant suite in clean checkout, publish reproducible version/tag and changelog in the existing repository, confirm remote artifacts; document remaining upstream acceptance and reward uncertainty."
+      "status": "blocked",
+      "acceptance": "Review all units, run relevant suite in clean checkout, publish reproducible version/tag and changelog in the existing repository, confirm remote artifacts; document remaining upstream acceptance and reward uncertainty.",
+      "blocker": {
+        "checkedAt": "2026-10-20T13:14:10.997Z",
+        "reason": "Final release requires completed C08 and a verified GitHub CI run.",
+        "dependsOn": [
+          "C08"
+        ]
+      }
     }
   ]
 }
