@@ -1,0 +1,116 @@
+{
+  "unit": "C09",
+  "checkedAt": "2026-10-20T13:13:39.918Z",
+  "cleanCheckoutVerification": {
+    "checkedAt": "2026-10-20T13:12:34.283200+00:00",
+    "sourceCommit": "ab8b6f4f858c3eab0fca032a0f17d9fc2822d3ba",
+    "cleanPublicClone": true,
+    "node": "v22.22.0",
+    "identicalBilingualCommands": true,
+    "walletConfigPresent": false,
+    "results": [
+      {
+        "command": "npm ci --ignore-scripts --no-audit --no-fund",
+        "exitCode": 0,
+        "install": "lockfile, lifecycle scripts disabled"
+      },
+      {
+        "command": "npm test",
+        "exitCode": 0,
+        "testsPassed": 57
+      },
+      {
+        "command": "npm run --silent reproduce:receipt",
+        "exitCode": 0,
+        "passed": true
+      },
+      {
+        "command": "npm run --silent reproduce:outcomes",
+        "exitCode": 0,
+        "passed": true
+      },
+      {
+        "command": "npm run --silent verify:ermac",
+        "exitCode": 0,
+        "passed": true
+      },
+      {
+        "command": "node src/diagnose-ermac.mjs --snapshot tests/fixtures/ermac-ready-synthetic.json",
+        "exitCode": 0,
+        "ready": true,
+        "inputMode": "supplied_snapshot"
+      },
+      {
+        "command": "node src/agp-schedule.mjs --before tests/fixtures/agp-before.json --after tests/fixtures/agp-after.json",
+        "exitCode": 0,
+        "state": "changed",
+        "inputMode": "supplied_snapshots"
+      }
+    ]
+  },
+  "guides": [
+    "docs/QUICKSTART.ko.md",
+    "docs/QUICKSTART.en.md"
+  ],
+  "sourceChecks": [
+    {
+      "url": "https://www.rialo.io/for-devs",
+      "state": "verified_public_page",
+      "finding": "Links to official Discord, docs and Playground."
+    },
+    {
+      "url": "https://discord.gg/RialoProtocol",
+      "state": "official_entry_link_verified_channel_unverified",
+      "finding": "Official portal links here; invite redirects to discord.com/invite/RialoProtocol. Specific submission channel and rules not verified."
+    },
+    {
+      "url": "https://docs.rialo.io",
+      "state": "access_restricted",
+      "finding": "Redirects to Cloudflare Access login; protected content not inspected."
+    },
+    {
+      "url": "https://playground.rialo.io",
+      "state": "public_shell_only",
+      "finding": "No submission procedure verified from accessible public text."
+    },
+    {
+      "url": "https://registry.npmjs.org/@rialo%2Fts-cdk/0.18.1",
+      "repository": {
+        "url": "git+https://github.com/SubzeroLabs/rialo.git",
+        "type": "git"
+      },
+      "bugs": {
+        "url": "https://github.com/SubzeroLabs/rialo/issues"
+      },
+      "homepage": "https://github.com/SubzeroLabs/rialo#readme",
+      "state": "verified_package_metadata"
+    },
+    {
+      "url": "https://github.com/SubzeroLabs/rialo/issues",
+      "state": "public_404",
+      "finding": "Package-declared bug route is not publicly accessible; cannot determine private versus removed."
+    },
+    {
+      "url": "https://github.com/SubzeroLabs/rialo",
+      "state": "public_404"
+    },
+    {
+      "url": "https://docs.rs/rialo-cdk/latest/rialo_cdk/",
+      "state": "verified_public_api_reference",
+      "finding": "Technical reference available; not a submission portal."
+    }
+  ],
+  "externalMessagesSent": 0,
+  "newTransactions": 0,
+  "ledgerUnchanged": true,
+  "contributionAcceptance": "unverified",
+  "rewardStatus": "unverified",
+  "separateCiStatus": {
+    "unit": "C08",
+    "state": "blocked",
+    "reason": "GitHub rejected workflow upload because the current OAuth connection lacks workflow scope",
+    "localTestsPassed": 57,
+    "localCliChecksPassed": 5,
+    "successfulGitHubRun": false
+  }
+}

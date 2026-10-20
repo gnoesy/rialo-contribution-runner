@@ -4,6 +4,12 @@ A reproducible SDK integration probe and readiness monitor for Rialo developers.
 
 **This is an independent community project. It does not earn or claim guaranteed points or airdrops.** A successful Devnet transaction is a technical test, not proof of accepted contribution credit.
 
+Start with the verified clean-checkout guide:
+[한국어](docs/QUICKSTART.ko.md) · [English](docs/QUICKSTART.en.md).
+It includes supported commands and checked official contact routes, with
+inaccessible submission channels labelled explicitly. GitHub CI remains pending
+workflow-write authorization; no successful CI run is claimed.
+
 ## Current evidence
 
 - [Latest automated status](reports/latest.json): public Devnet/Testnet RPC health, ERMAC program availability and AGP upcoming-race count.
