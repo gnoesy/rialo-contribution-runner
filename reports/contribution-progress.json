@@ -2,19 +2,19 @@
   "schemaVersion": 1,
   "cycle": 1,
   "title": "Rialo 개발자 도구 기여",
-  "updatedAt": "2026-10-20T10:09:29.058Z",
+  "updatedAt": "2026-10-20T11:13:03.772Z",
   "cadence": {
     "timezone": "Asia/Seoul",
     "minute": 10,
     "targetUnitsPerRun": 1,
     "targetPercentagePoints": 10
   },
-  "completedUnits": 5,
+  "completedUnits": 6,
   "totalUnits": 10,
-  "progressPercent": 50,
+  "progressPercent": 60,
   "contributionAcceptance": "unverified",
   "rewardStatus": "unverified",
-  "nextTaskId": "C06",
+  "nextTaskId": "C07",
   "tasks": [
     {
       "id": "C01",
@@ -90,8 +90,15 @@
       "id": "C06",
       "title": "ERMAC 명령 직렬화 검증",
       "weight": 10,
-      "status": "queued",
-      "acceptance": "Compare serialized instruction layout against the pinned public app with deterministic fixtures; negative cases for changed hash or invalid inputs; public reproducible report, without claiming live feed success."
+      "status": "done",
+      "acceptance": "Compare serialized instruction layout against the pinned public app with deterministic fixtures; negative cases for changed hash or invalid inputs; public reproducible report, without claiming live feed success.",
+      "completedAt": "2026-10-20T11:13:03.772Z",
+      "evidence": {
+        "commitUrl": "https://github.com/gnoesy/rialo-contribution-runner/commit/e7b45fcee8300a72818cf1b18176c056c62b11b2",
+        "artifactUrl": "https://github.com/gnoesy/rialo-contribution-runner/blob/e7b45fcee8300a72818cf1b18176c056c62b11b2/reports/2026-10-20-c06-wire.json",
+        "tests": "48/48 tests passed; unsigned 36/243-byte instructions match manually transcribed hash-verified app layout; negative mutation/input cases pass; no live feed submission",
+        "testCount": 48
+      }
     },
     {
       "id": "C07",
