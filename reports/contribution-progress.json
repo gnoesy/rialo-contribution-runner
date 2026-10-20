@@ -2,19 +2,19 @@
   "schemaVersion": 1,
   "cycle": 1,
   "title": "Rialo 개발자 도구 기여",
-  "updatedAt": "2026-10-20T07:15:56.249Z",
+  "updatedAt": "2026-10-20T08:17:58.159Z",
   "cadence": {
     "timezone": "Asia/Seoul",
     "minute": 10,
     "targetUnitsPerRun": 1,
     "targetPercentagePoints": 10
   },
-  "completedUnits": 2,
+  "completedUnits": 3,
   "totalUnits": 10,
-  "progressPercent": 20,
+  "progressPercent": 30,
   "contributionAcceptance": "unverified",
   "rewardStatus": "unverified",
-  "nextTaskId": "C03",
+  "nextTaskId": "C04",
   "tasks": [
     {
       "id": "C01",
@@ -48,8 +48,15 @@
       "id": "C03",
       "title": "실패 거래 재현 사례",
       "weight": 10,
-      "status": "queued",
-      "acceptance": "Fixtures cover successful receipt, execution failure, missing transaction and signature mismatch; CLI/report distinguishes these accurately; no signing; public tests."
+      "status": "done",
+      "acceptance": "Fixtures cover successful receipt, execution failure, missing transaction and signature mismatch; CLI/report distinguishes these accurately; no signing; public tests.",
+      "completedAt": "2026-10-20T08:17:58.159Z",
+      "evidence": {
+        "commitUrl": "https://github.com/gnoesy/rialo-contribution-runner/commit/1b3fea72802fadf45d16c1599a56e03b9f6eb845",
+        "artifactUrl": "https://github.com/gnoesy/rialo-contribution-runner/blob/1b3fea72802fadf45d16c1599a56e03b9f6eb845/reports/receipt-outcomes.json",
+        "tests": "25/25 tests passed; seven recorded/synthetic fixture cases distinguished; live receipt query currently returns RPC not-found and is not counted as successful",
+        "testCount": 25
+      }
     },
     {
       "id": "C04",
