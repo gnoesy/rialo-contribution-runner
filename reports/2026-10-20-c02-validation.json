@@ -1,0 +1,22 @@
+{
+  "unit": "C02",
+  "checkedAt": "2026-10-20T07:15:53.951Z",
+  "tests": {
+    "command": "node --test tests/*.test.mjs",
+    "passed": 20,
+    "failed": 0
+  },
+  "liveRead": {
+    "checkedAt": "2026-10-20T07:15:13.337Z",
+    "signature": "5UD6CupQHvQhKzNuLszdxyvwjijtHsv3ZnM6oN5JBSgswGMhsxen9LTT5omXc48v8DA9Kvn47PsDh9B9WxkFKBSc",
+    "blockHeight": "2775152",
+    "feeKelvin": "0",
+    "error": null
+  },
+  "newTransactions": 0,
+  "limitations": [
+    "Recorded response mutation tests are not new chain transactions.",
+    "Integer representation validation does not establish protocol maximum widths or finality.",
+    "Official acceptance and rewards remain unverified."
+  ]
+}
