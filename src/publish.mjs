@@ -17,7 +17,7 @@ if(conf.publishRepository==='gnoesy/rialo-contribution-runner'){
     if(s.fingerprint!==old.fingerprint||Date.now()-Date.parse(old.at??0)>86400000){
       // Explicit whitelist. Wallet paths, local config, private keys, arbitrary errors and signed wire bytes never leave this machine.
       const report={schemaVersion:1,checkedAt:s.checkedAt,networks:s.networks.map(n=>({url:n.url,health:n.health??'unverified',height:n.height,configHash:n.configHash,latencyMs:n.latencyMs,programs:n.programs})),
-        agp:{state:s.agp.state,upcomingCount:s.agp.agenda?.length},sdk:s.sdk,ermacBundle:s.ermacBundle,
+        agp:{state:s.agp.state,upcomingCount:s.agp.agenda?.length,changeSummary:s.agp.changeSummary},sdk:s.sdk,ermacBundle:s.ermacBundle,
         canary:s.canary?{state:s.canary.state,signature:s.canary.signature,estimatedFeeKelvin:s.canary.estimatedFeeKelvin}:null,
         participation:{state:s.participation.state,signature:s.participation.signature},rewardStatus:s.rewardStatus};
       await save(root+'/reports/latest.json',report);

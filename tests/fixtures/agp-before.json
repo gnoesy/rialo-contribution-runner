@@ -1,0 +1,9 @@
+{
+  "provenance": "Synthetic test events; not actual races or participation offers.",
+  "state": "verified_public_api",
+  "checkedAt": "2026-10-20T00:00:00.000Z",
+  "agenda": [
+    {"id": "synthetic-a", "name": "Fixture A", "status": "scheduled", "regOpensAt": "2026-10-21T00:00:00.000Z", "regClosesAt": "2026-10-21T01:00:00.000Z", "raceAt": "2026-10-21T02:00:00.000Z", "viewerEligible": null},
+    {"id": "synthetic-b", "name": "Fixture B", "status": "scheduled", "raceAt": "2026-10-22T02:00:00.000Z"}
+  ]
+}

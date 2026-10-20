@@ -130,6 +130,38 @@ no signing key used. [Reviewed wire layout and scope](reports/2026-10-20-ermac-w
 and [verification results](reports/2026-10-20-c06-wire.json) describe what this
 proves. No live feed success or reward entitlement is implied.
 
+### Detect AGP schedule changes
+
+```sh
+# Offline synthetic examples, not real participation offers
+npm run --silent diff:agenda -- --before tests/fixtures/agp-before.json --after tests/fixtures/agp-after.json
+# After the public monitor has created a successful agenda baseline:
+node src/agp-schedule.mjs --before runtime/agp-baseline.json --live
+```
+
+Snapshots contain `{state:"verified_public_api", checkedAt, agenda:[...]}`.
+The comparator uses each agenda item's unique string `id`, ignores row/property
+ordering and reports added/removed entries plus changed fields. A successful
+empty list is valid evidence; network failure, malformed schema, missing IDs
+or duplicate IDs leave changes unknown (`null`, not zero). Older timestamped
+observations cannot roll back the baseline. The first observation initializes
+the baseline without presenting existing entries as newly added opportunities.
+
+The 15-minute runner now retains the last successful list in
+`runtime/agp-baseline.json`, records actual differences in
+`runtime/agp-changes.jsonl` and exposes only change counts in its public report.
+Unknown observations preserve that baseline for the next successful check.
+The standalone CLI only reads files/the fixed public agenda URL and prints
+JSON; it does not update a baseline, register, bet or use account credentials.
+Exit 0 means a verified comparison/initialization, 1 means unknown comparison,
+and 2 means invalid command/file input.
+
+Removed means absent from the current agenda response, not proven cancellation.
+An explicit `status` change to `cancelled` is reported as a changed field.
+Public schedules do not establish personalized eligibility, rewards or a safe
+betting strategy. [Schema provenance and verification](reports/2026-10-20-c07-agenda.json)
+separate synthetic change cases from observed live empty agendas.
+
 ## Optional bounded Devnet integration
 
 Copy `config.example.json` to ignored `config.local.json` and enter an **existing** development wallet path and its public address. The original 0600 key file is read only in memory. Neither keys nor raw signed transactions are written into reports or uploaded.

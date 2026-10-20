@@ -5,6 +5,7 @@ import {load,save,json,lock,inspectNetwork,getJson,getText,sha256,actionFingerpr
 import {runCanary} from './transactions.mjs';
 import {maybeCreateFeed,BUNDLE_URL,BUNDLE_SHA256} from './ermac.mjs';
 import {getReceipt} from './receipt.mjs';
+import {advanceAgenda,scheduleSummary} from './agp-schedule.mjs';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const runtime=process.env.RIALO_RUNTIME_DIR?path.resolve(process.env.RIALO_RUNTIME_DIR):path.join(root,'runtime');
@@ -24,6 +25,11 @@ try{
   const s={schemaVersion:1,checkedAt:now,sdkVersion:SDK_VERSION,networks:values.slice(0,3),agp:values[3],sdk:values[4],ermacBundle:values[5],
     rewardStatus:'unverified: test tokens and SDK checks are not Rialo Points or an airdrop entitlement',
     xCoverage:'Daily Codex heartbeat verifies public X pages; this worker does not infer no changes from unavailable X data.'};
+  const agendaFile=path.join(runtime,'agp-baseline.json'),agendaBefore=await load(agendaFile,null);
+  const agendaNext=advanceAgenda(agendaBefore,{...s.agp,checkedAt:now});
+  s.agp.changeSummary=scheduleSummary(agendaNext.comparison);
+  if(agendaNext.baseline!==agendaBefore)await save(agendaFile,agendaNext.baseline);
+  if(agendaNext.comparison.state==='changed')await appendFile(runtime+'/agp-changes.jsonl',JSON.stringify({at:now,...agendaNext.comparison})+'\n',{mode:0o600});
   if(conf){
     const reachable=s.networks.find(n=>n.url===conf.rpcUrl&&n.health==='ok')??s.networks.find(n=>DEVNET_URLS.includes(n.url)&&n.health==='ok');
     const effective=reachable?{...conf,rpcUrl:reachable.url}:conf;

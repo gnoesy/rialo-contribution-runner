@@ -1,0 +1,52 @@
+{
+  "unit": "C07",
+  "checkedAt": "2026-10-20T12:17:37.720Z",
+  "tests": {
+    "command": "node --test tests/*.test.mjs",
+    "passed": 57,
+    "failed": 0,
+    "changeCases": "synthetic; not real race announcements"
+  },
+  "provenance": {
+    "agenda": "https://api.agp.onlatch.com/track/schedule/agenda",
+    "apiAsset": {
+      "url": "https://agp.onlatch.com/assets/api-DOu0x2A2.js",
+      "sha256": "bfb27fc300073db709bdd82872c46f3239fc3d9cfe94d71ec3ec604db2e8de10"
+    },
+    "uiAsset": {
+      "url": "https://agp.onlatch.com/assets/tracks-B4TJv2hM.js",
+      "sha256": "7567952c1d684ee7c4ca2b7ac4b88b8c23542be5b4a0785a94a51d0925bbb95b"
+    },
+    "finding": "Public frontend uses agenda item.id, status, regOpensAt, regClosesAt and raceAt. Live populated agenda schema is not observed; duplicate or missing IDs block comparison."
+  },
+  "integration": {
+    "monitorCheckedAt": "2026-10-20T12:17:12.604Z",
+    "mode": "public_read_only",
+    "initialSummary": {
+      "state": "initialized",
+      "comparable": false,
+      "addedCount": 0,
+      "removedCount": 0,
+      "changedCount": 0
+    },
+    "followupRead": {
+      "schemaVersion": 1,
+      "source": "https://api.agp.onlatch.com/track/schedule/agenda",
+      "inputMode": "public_live_read",
+      "beforeCheckedAt": "2026-10-20T12:17:12.604Z",
+      "afterCheckedAt": "2026-10-20T12:17:36.833Z",
+      "currentState": "verified_public_api",
+      "currentCount": 0,
+      "state": "unchanged",
+      "comparable": true,
+      "added": [],
+      "removed": [],
+      "changed": [],
+      "limitation": "Removed means absent from this agenda response, not proven cancellation. Public agenda does not establish personalized eligibility, points or rewards."
+    }
+  },
+  "ledgerUnchanged": true,
+  "newTransactions": 0,
+  "contributionAcceptance": "unverified",
+  "rewardStatus": "unverified"
+}
