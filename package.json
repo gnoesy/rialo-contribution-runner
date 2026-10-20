@@ -3,6 +3,6 @@
   "version": "1.0.0",
   "private": true,
   "type": "module",
-  "scripts": {"test": "node --test tests/*.test.mjs", "check": "node src/runner.mjs --once"},
+  "scripts": {"test": "node --test tests/*.test.mjs", "check": "node src/runner.mjs --once", "reproduce:receipt": "node src/reproduce-receipt.mjs"},
   "dependencies": {"@rialo/ts-cdk": "0.18.1"}
 }

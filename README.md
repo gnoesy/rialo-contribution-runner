@@ -21,7 +21,17 @@ npm test
 node src/runner.mjs --public
 ```
 
-Results are written to `runtime/latest.json`. `--public` ignores local wallet configuration and never signs or requests a faucet. Eleven tests cover lossless u64 config hashes, Devnet-only signing, unknown versus absent accounts, program readiness, deterministic transactions, duplicate suppression, fees and execution errors, the reproduced SDK receipt parser failure and its compatibility adapter.
+Results are written to `runtime/latest.json`. `--public` ignores local wallet configuration and never signs or requests a faucet. Tests cover lossless u64 config hashes, Devnet-only signing, unknown versus absent accounts, program readiness, deterministic transactions, duplicate suppression, fees and execution errors, the reproduced SDK receipt parser failure and its compatibility adapter.
+
+### Reproduce the receipt compatibility issue offline
+
+After dependency installation, run:
+
+```sh
+npm run reproduce:receipt
+```
+
+This serves the recorded Devnet response on loopback, reproduces the `@rialo/ts-cdk@0.18.1` parsing failure, and prints the successful normalized adapter receipt as JSON. It exits nonzero if the expected result cannot be reproduced. It needs no wallet, faucet or public RPC connection. The fixture is historical evidence, not a fresh network check.
 
 ## Optional bounded Devnet integration
 
@@ -37,7 +47,9 @@ The normal runner does not repeat the canary. If `autoCreateFeed` is explicitly 
 
 ## Automation
 
-`node src/service.mjs` runs one bounded check and an optional public-report sync. On the operator's Mac mini, launchd runs this every 15 minutes and on login. Public status is pushed when material status changes or once a day; the publisher allows only the configured project repository and whitelists fields. Private state is never committed. A daily Codex heartbeat separately checks public X posts, protected-doc access status and actionable opportunities. No hidden X API or login bypass is used.
+`node src/service.mjs` runs one bounded check and an optional public-report sync. On the operator's Mac mini, launchd runs this every 15 minutes and on login. Public status is pushed when material status changes or once a day; the publisher allows only the configured project repository and whitelists fields. Private state is never committed.
+
+The operator's hourly Codex routine follows [the contribution work plan](WORKPLAN.md), targeting one verified, published work unit per run. [Contribution progress](reports/contribution-progress.json) is separate from network status and reward eligibility. Public X posts, protected-doc access and opportunities are reviewed once daily. No hidden X API or login bypass is used.
 
 If the Devnet 4101 endpoint is unavailable, the runner can use the official ERMAC app's HTTPS 443 RPC endpoint. Network timeouts remain `unverified`, not `absent`. A changed ERMAC asset blocks automatic deployment for review. The last 192 network snapshots are retained. A failed service or stale report needs investigation, not blind retry of signed work.
 

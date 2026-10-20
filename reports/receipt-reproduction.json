@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "mode": "offline_fixture",
+  "sdkVersion": "0.18.1",
+  "fixture": "tests/fixtures/canary-rpc.json",
+  "fixtureSource": "Recorded Devnet getTransaction response, 2026-10-18",
+  "publicNetworkRequests": 0,
+  "transactionsSubmitted": 0,
+  "sdk": {
+    "expectedFailureReproduced": true,
+    "error": "Cannot read properties of undefined (reading 'map')"
+  },
+  "adapter": {
+    "passed": true,
+    "receipt": {
+      "signature": "5UD6CupQHvQhKzNuLszdxyvwjijtHsv3ZnM6oN5JBSgswGMhsxen9LTT5omXc48v8DA9Kvn47PsDh9B9WxkFKBSc",
+      "blockHeight": "2775152",
+      "feeKelvin": "0",
+      "error": null,
+      "accountKeys": [
+        "4Y8R73V9QpmL2oUtS4LrwdZk3LrPRCLp7KGg2npPkB1u",
+        "4FiCKXU3vvvi4eRuoHVqLubDMfHrZfqgCouNjSo7szUC",
+        "11111111111111111111111111111111"
+      ],
+      "programs": [
+        "11111111111111111111111111111111"
+      ],
+      "signerCount": 2,
+      "validFrom": "1792291170185",
+      "logs": [
+        "Program 11111111111111111111111111111111 invoke [1]",
+        "Program 11111111111111111111111111111111 success"
+      ],
+      "rpcVersion": "0.22.0-alpha.2"
+    }
+  },
+  "passed": true,
+  "limitation": "Recorded-response compatibility reproduction; not a fresh live-chain check or contribution reward."
+}
