@@ -24,9 +24,10 @@ export function feedAddresses(creator){
     subscription:pda(subscriber,[enc('rialo_subscribe'),pk(creator).toBytes(),nonce(5)]),
     rex:pda(oracle,[enc('rex_info'),pk(creator).toBytes(),nonce(6)])};
 }
-export function buildFeed(creator,config){
-  if(config<=0n)throw Error('Live config hash required');
-  const a=feedAddresses(creator),t=TransactionBuilder.create().setPayer(pk(creator)).setValidFrom(BigInt(Date.now())).setConfigHashPrefix(config);
+export function buildFeed(creator,config,{validFrom=BigInt(Date.now())}={}){
+  if(typeof config!=='bigint'||config<=0n||config>2n**64n-1n)throw Error('Config hash must be a positive u64 bigint');
+  if(typeof validFrom!=='bigint'||validFrom<=0n||validFrom>2n**64n-1n)throw Error('validFrom must be a positive u64 bigint');
+  const a=feedAddresses(creator),t=TransactionBuilder.create().setPayer(pk(creator)).setValidFrom(validFrom).setConfigHashPrefix(config);
   t.addInstruction({programId:pk(PROGRAMS.registryProgramId),accounts:[meta(creator,true,true),meta(a.creator,false,true),meta(a.global,false,true),meta(system)],data:Buffer.concat([u32(1),Buffer.from(a.workflow.toBytes())])});
   t.addInstruction({programId:pk(PROGRAMS.subscriberProgramId),accounts:[meta(creator,true,true),meta(a.workflow,false,true),meta(oracle),meta(system),meta(subscriber),meta(a.subscription,false,true),meta(a.rex,false,true)],
     data:Buffer.concat([u32(4),a.slug,str(FEED.name),str(FEED.url),Buffer.from(pk(PROGRAMS.medianAggregatorId).toBytes()),Buffer.from(a.event.toBytes()),u64(FEED.interval),vec(FEED.labels),vec(FEED.patterns)])});

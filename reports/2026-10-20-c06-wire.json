@@ -1,0 +1,93 @@
+{
+  "unit": "C06",
+  "checkedAt": "2026-10-20T11:12:40.743Z",
+  "tests": {
+    "command": "node --test tests/*.test.mjs",
+    "passed": 48,
+    "failed": 0,
+    "network": "offline fixtures"
+  },
+  "verification": {
+    "schemaVersion": 1,
+    "passed": true,
+    "mode": "offline_unsigned",
+    "protocol": {
+      "url": "https://ermac.rialo.io/assets/frost-public-key-tgtsfZiz.js",
+      "sha256": "2e5fc8a9ab654d4ca2067c70d14789da15e17e7656984fa9ff5d9560396890ac",
+      "bundleFileVerified": true
+    },
+    "referenceMethod": "Expected instruction bytes independently encoded with Python struct from the inspected app layout. Expected PDA strings captured via pinned SDK; PDA derivation is not an independent implementation. App bundle not executed. Synthetic payer is a public program address, not a signing wallet.",
+    "checks": [
+      {
+        "id": "payer",
+        "passed": true
+      },
+      {
+        "id": "configHash",
+        "passed": true
+      },
+      {
+        "id": "validFrom",
+        "passed": true
+      },
+      {
+        "id": "signers",
+        "passed": true
+      },
+      {
+        "id": "workflowSlug",
+        "passed": true
+      },
+      {
+        "id": "derivedAddresses",
+        "passed": true
+      },
+      {
+        "id": "instructionCount",
+        "passed": true
+      },
+      {
+        "id": "instruction0.program",
+        "passed": true
+      },
+      {
+        "id": "instruction0.accountOrderAndPrivileges",
+        "passed": true
+      },
+      {
+        "id": "instruction0.bytes",
+        "passed": true
+      },
+      {
+        "id": "instruction1.program",
+        "passed": true
+      },
+      {
+        "id": "instruction1.accountOrderAndPrivileges",
+        "passed": true
+      },
+      {
+        "id": "instruction1.bytes",
+        "passed": true
+      }
+    ],
+    "instructions": [
+      {
+        "index": 0,
+        "bytes": 36,
+        "sha256": "e6c4566f25f288666baa5d0be7d577d4e3bc4e7f0d005c5a14a108700f353f0f"
+      },
+      {
+        "index": 1,
+        "bytes": 243,
+        "sha256": "dc63ed8645469c3362cfbc0fad9c378e67a7e87f9e08259ba3106496f8e9a2f7"
+      }
+    ],
+    "limitations": "Compares against a manually transcribed public app layout and fixed PDA fixture, not an independent official-app execution. No network, wallet, signing, submission, live feed success or reward claim."
+  },
+  "ledgerUnchanged": true,
+  "newTransactions": 0,
+  "liveFeedExecution": "not_attempted; deployed programs still unavailable in latest monitor",
+  "contributionAcceptance": "unverified",
+  "rewardStatus": "unverified"
+}

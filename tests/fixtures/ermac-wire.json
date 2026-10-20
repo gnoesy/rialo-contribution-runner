@@ -1,0 +1,98 @@
+{
+  "schemaVersion": 1,
+  "provenance": {
+    "kind": "manually_transcribed_public_app_layout",
+    "url": "https://ermac.rialo.io/assets/frost-public-key-tgtsfZiz.js",
+    "sha256": "2e5fc8a9ab654d4ca2067c70d14789da15e17e7656984fa9ff5d9560396890ac",
+    "reviewedAt": "2026-10-20",
+    "functions": [
+      "Me.writeVariant/writeU64/writeString/writeVec",
+      "an",
+      "nn",
+      "Ut",
+      "cn"
+    ],
+    "method": "Expected instruction bytes independently encoded with Python struct from the inspected app layout. Expected PDA strings captured via pinned SDK; PDA derivation is not an independent implementation. App bundle not executed. Synthetic payer is a public program address, not a signing wallet."
+  },
+  "creator": "M4tvfJkVtzhBozkywmG45xfvBJhVqJghqSuxjEKY6Mx",
+  "configHash": "123",
+  "validFrom": "1792494000000",
+  "slugHex": "75d4b48399f3c4aeaee0e8257be602cf0602ae48b79470b3496ca541d873d930",
+  "addresses": {
+    "workflow": "JDJoctkCeDMFju3WvTD5Ngex3XxymAnx9HRpwDSR3Yv4",
+    "event": "9AuU255PUKWP45cyMozDj6wXTNiRV72PatRhDEK89j9x",
+    "creator": "5maM7V8hJ2qGuMXZ3Mwyte4sYC6J4tgwhvQrczNLS3Pq",
+    "global": "3UBDAjfooL8e64tTRtJAgP9RXj15qfZx1TZ2faLKz35y",
+    "subscription": "8Z5EkqicgZij1uCNERwmDyARcwKZtM9fJ3Kr1iTieNjg",
+    "rex": "GvehZNCvuxvnY7etUyGpoz74TWhepLQFR9Z72qVLzRE2"
+  },
+  "instructions": [
+    {
+      "programId": "3nmnQVAgKaBrWiauqdEwoSqa8rVACjEbZVcGH5VeVn62",
+      "accounts": [
+        {
+          "pubkey": "M4tvfJkVtzhBozkywmG45xfvBJhVqJghqSuxjEKY6Mx",
+          "isSigner": true,
+          "isWritable": true
+        },
+        {
+          "pubkey": "5maM7V8hJ2qGuMXZ3Mwyte4sYC6J4tgwhvQrczNLS3Pq",
+          "isSigner": false,
+          "isWritable": true
+        },
+        {
+          "pubkey": "3UBDAjfooL8e64tTRtJAgP9RXj15qfZx1TZ2faLKz35y",
+          "isSigner": false,
+          "isWritable": true
+        },
+        {
+          "pubkey": "11111111111111111111111111111111",
+          "isSigner": false,
+          "isWritable": false
+        }
+      ],
+      "dataHex": "01000000ffbdc73b34232ba5479c4793d184a4926ac87dc2ee127b212d4d86b748121ed1"
+    },
+    {
+      "programId": "95uDFDmcDHB32zpBzfaaXhmVNeJ5PAt2FaFw4nPknuho",
+      "accounts": [
+        {
+          "pubkey": "M4tvfJkVtzhBozkywmG45xfvBJhVqJghqSuxjEKY6Mx",
+          "isSigner": true,
+          "isWritable": true
+        },
+        {
+          "pubkey": "JDJoctkCeDMFju3WvTD5Ngex3XxymAnx9HRpwDSR3Yv4",
+          "isSigner": false,
+          "isWritable": true
+        },
+        {
+          "pubkey": "Qrac1eRegistry11111111111111111111111111111",
+          "isSigner": false,
+          "isWritable": false
+        },
+        {
+          "pubkey": "11111111111111111111111111111111",
+          "isSigner": false,
+          "isWritable": false
+        },
+        {
+          "pubkey": "Subscriber111111111111111111111111111111111",
+          "isSigner": false,
+          "isWritable": false
+        },
+        {
+          "pubkey": "8Z5EkqicgZij1uCNERwmDyARcwKZtM9fJ3Kr1iTieNjg",
+          "isSigner": false,
+          "isWritable": true
+        },
+        {
+          "pubkey": "GvehZNCvuxvnY7etUyGpoz74TWhepLQFR9Z72qVLzRE2",
+          "isSigner": false,
+          "isWritable": true
+        }
+      ],
+      "dataHex": "0400000075d4b48399f3c4aeaee0e8257be602cf0602ae48b79470b3496ca541d873d9301200000000000000474e4f4553595f555344435f5553445f5631300000000000000068747470733a2f2f6170692e636f696e626173652e636f6d2f76322f7072696365732f555344432d5553442f73706f7405240543f1633f431a2b83e8cbd22e120e34cd0d110b034b519f014a72560b8b79670bc6c47c12cbd32066c10a3c8e1e11fbf0f6072b422dfbffdc9366dd571f100e00000000000001000000000000000800000000000000555344435f55534401000000000000000d00000000000000242e646174612e616d6f756e74"
+    }
+  ]
+}
