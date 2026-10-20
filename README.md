@@ -46,6 +46,34 @@ expected, not that every simulated transaction succeeded. Failure cases were
 constructed for testing except the explicitly labelled RPC read error; none is a claim of an observed failed transaction.
 See [outcome semantics and limits](reports/2026-10-20-receipt-outcomes.md).
 
+### Inspect an existing Devnet receipt
+
+```sh
+npm run --silent inspect:receipt -- \
+  --rpc https://devnet.rialo.io:4101 \
+  --signature 5UD6CupQHvQhKzNuLszdxyvwjijtHsv3ZnM6oN5JBSgswGMhsxen9LTT5omXc48v8DA9Kvn47PsDh9B9WxkFKBSc
+```
+
+This makes one read-only `getTransaction` request, prints normalized JSON and
+needs no wallet or local configuration. Both flags are required. The only
+accepted URLs are exactly `https://devnet.rialo.io:4101` and
+`https://devnet.rialo.io`; redirects and arbitrary endpoints are rejected.
+Requests have a 15-second timeout and a 2 MB response limit, with no retries.
+
+Exit **0** means the returned receipt has explicit successful execution.
+Exit **1** means unsuccessful execution or an unavailable/invalid read; inspect
+`state`, `httpStatus` and `rpcError` to distinguish them. Exit **2** means invalid
+arguments. HTTP errors can never produce a successful result, even if their
+body resembles a receipt. `rpc_error`, `not_found`, `http_error`,
+`transport_error` and `invalid_receipt` do **not** mean the transaction failed.
+Do not resubmit a saved transaction based on those states.
+
+The example signature is historical evidence: an RPC may stop serving its
+receipt. At the October 20 check it returned HTTP 404 / RPC -32001. Neither that
+read failure nor a successful receipt proves finality, contribution acceptance
+or rewards. [C04 verification](reports/2026-10-20-c04-inspection.json) records the
+live observation separately from the offline tests.
+
 ## Optional bounded Devnet integration
 
 Copy `config.example.json` to ignored `config.local.json` and enter an **existing** development wallet path and its public address. The original 0600 key file is read only in memory. Neither keys nor raw signed transactions are written into reports or uploaded.
