@@ -2,19 +2,19 @@
   "schemaVersion": 1,
   "cycle": 1,
   "title": "Rialo 개발자 도구 기여",
-  "updatedAt": "2026-10-20T11:13:03.772Z",
+  "updatedAt": "2026-10-20T12:18:04.931Z",
   "cadence": {
     "timezone": "Asia/Seoul",
     "minute": 10,
     "targetUnitsPerRun": 1,
     "targetPercentagePoints": 10
   },
-  "completedUnits": 6,
+  "completedUnits": 7,
   "totalUnits": 10,
-  "progressPercent": 60,
+  "progressPercent": 70,
   "contributionAcceptance": "unverified",
   "rewardStatus": "unverified",
-  "nextTaskId": "C07",
+  "nextTaskId": "C08",
   "tasks": [
     {
       "id": "C01",
@@ -104,8 +104,15 @@
       "id": "C07",
       "title": "AGP 일정 변경 감지",
       "weight": 10,
-      "status": "queued",
-      "acceptance": "Fixture-driven added/removed/changed schedule comparison; empty agenda distinguished from fetch failure; no registration/betting; public command and tests."
+      "status": "done",
+      "acceptance": "Fixture-driven added/removed/changed schedule comparison; empty agenda distinguished from fetch failure; no registration/betting; public command and tests.",
+      "completedAt": "2026-10-20T12:18:04.931Z",
+      "evidence": {
+        "commitUrl": "https://github.com/gnoesy/rialo-contribution-runner/commit/ec1525ef55ea480520b8dc3dcb7f75440f2e6a95",
+        "artifactUrl": "https://github.com/gnoesy/rialo-contribution-runner/blob/ec1525ef55ea480520b8dc3dcb7f75440f2e6a95/reports/2026-10-20-c07-agenda.json",
+        "tests": "57/57 tests passed; synthetic add/remove/change and failure recovery verified; public-only runner initialized empty agenda and live follow-up stayed unchanged; no registration or betting",
+        "testCount": 57
+      }
     },
     {
       "id": "C08",
