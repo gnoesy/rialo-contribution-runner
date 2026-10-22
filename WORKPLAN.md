@@ -36,3 +36,20 @@ Preserve `runtime/ledger.json`, the single existing development wallet, one-time
 No mainnet spending, betting, multiple identities, claims, relinking, key uploads, X/Discord messages or authentication/private-beta bypass. No upstream issues, comments or messages are sent without explicit authorization. Publishing technical artifacts in the existing user repository is in scope; team acceptance and rewards remain unverified.
 
 The daily official-source review remains due once per Korea calendar day; run it during the first available hourly session after 09:00 and preserve inaccessible-source caveats. Update the existing owner-private dashboard for verified contribution milestones or material changes with the Sites skill; retain step IDs and D1 user completion records. Never mark the user's participation tasks complete.
+
+## Cycle 1 closure — 2026-10-22
+
+C01–C10 are published and verified: [v1.0.0](https://github.com/gnoesy/rialo-contribution-runner/releases/tag/v1.0.0).
+The completed ten-unit record is retained in [cycle-01.json](reports/cycles/cycle-01.json);
+[release evidence](reports/2026-10-22-c10-release.json) records the exact source,
+CI, clean-archive tests and downloaded asset checksums. This is toolkit delivery,
+not official contribution acceptance or reward credit.
+
+The hourly routine now checks for concrete follow-up needs while the existing
+15-minute monitor continues. No second cycle is opened merely to reset progress.
+Create the next scoped cycle only when a reproducible defect, official SDK/public
+protocol change, or new public deployment/participation requirement provides
+real work with testable acceptance criteria. Missing ERMAC programs, an empty
+AGP schedule and inaccessible protected documentation remain external limits;
+repeating tests or transactions cannot resolve them. Preserve cycle 1 history
+and record a quiet no-work outcome when no such change is verified.

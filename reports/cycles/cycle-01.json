@@ -1,0 +1,169 @@
+{
+  "schemaVersion": 1,
+  "cycle": 1,
+  "title": "Rialo 개발자 도구 기여",
+  "updatedAt": "2026-10-22T04:11:44.293Z",
+  "cadence": {
+    "timezone": "Asia/Seoul",
+    "minute": 10,
+    "targetUnitsPerRun": 1,
+    "targetPercentagePoints": 10
+  },
+  "completedUnits": 10,
+  "totalUnits": 10,
+  "progressPercent": 100,
+  "contributionAcceptance": "unverified",
+  "rewardStatus": "unverified",
+  "nextTaskId": null,
+  "tasks": [
+    {
+      "id": "C01",
+      "title": "SDK 오류 재현 CLI",
+      "weight": 10,
+      "status": "done",
+      "acceptance": "One documented command reproduces the pinned SDK error and shows the adapter result; CLI test passes; source is public.",
+      "completedAt": "2026-10-20T06:10:17.914Z",
+      "evidence": {
+        "commitUrl": "https://github.com/gnoesy/rialo-contribution-runner/commit/0834700079ed6cd547235e6707f6acb3f3027623",
+        "artifactUrl": "https://github.com/gnoesy/rialo-contribution-runner/blob/0834700079ed6cd547235e6707f6acb3f3027623/src/reproduce-receipt.mjs",
+        "tests": "12/12 node tests passed; standalone CLI returned passed=true",
+        "testCount": 12
+      }
+    },
+    {
+      "id": "C02",
+      "title": "거래 영수증 필드 검증",
+      "weight": 10,
+      "status": "done",
+      "acceptance": "Reject malformed, negative, fractional or missing block/fee/validFrom values; recorded camelCase and snake_case receipts still pass; focused tests and explanation are public.",
+      "completedAt": "2026-10-20T07:15:56.249Z",
+      "evidence": {
+        "commitUrl": "https://github.com/gnoesy/rialo-contribution-runner/commit/3bff645197a4aa7bca5f7c0a1faf67176e79b421",
+        "artifactUrl": "https://github.com/gnoesy/rialo-contribution-runner/blob/3bff645197a4aa7bca5f7c0a1faf67176e79b421/reports/2026-10-20-c02-validation.json",
+        "tests": "20/20 tests passed; original Devnet receipt read successfully without a new transaction",
+        "testCount": 20
+      }
+    },
+    {
+      "id": "C03",
+      "title": "실패 거래 재현 사례",
+      "weight": 10,
+      "status": "done",
+      "acceptance": "Fixtures cover successful receipt, execution failure, missing transaction and signature mismatch; CLI/report distinguishes these accurately; no signing; public tests.",
+      "completedAt": "2026-10-20T08:17:58.159Z",
+      "evidence": {
+        "commitUrl": "https://github.com/gnoesy/rialo-contribution-runner/commit/1b3fea72802fadf45d16c1599a56e03b9f6eb845",
+        "artifactUrl": "https://github.com/gnoesy/rialo-contribution-runner/blob/1b3fea72802fadf45d16c1599a56e03b9f6eb845/reports/receipt-outcomes.json",
+        "tests": "25/25 tests passed; seven recorded/synthetic fixture cases distinguished; live receipt query currently returns RPC not-found and is not counted as successful",
+        "testCount": 25
+      }
+    },
+    {
+      "id": "C04",
+      "title": "읽기 전용 영수증 조회 CLI",
+      "weight": 10,
+      "status": "done",
+      "acceptance": "Explicit allowlisted Devnet URL and signature input; normalized output and nonzero failure status; tests prove arbitrary RPC URLs are rejected; published usage example.",
+      "completedAt": "2026-10-20T09:15:28.715Z",
+      "evidence": {
+        "commitUrl": "https://github.com/gnoesy/rialo-contribution-runner/commit/876b96967d5fc3d9183a08c68f767ad759ca5bad",
+        "artifactUrl": "https://github.com/gnoesy/rialo-contribution-runner/blob/876b96967d5fc3d9183a08c68f767ad759ca5bad/reports/2026-10-20-c04-inspection.json",
+        "tests": "33/33 offline tests passed; both Devnet endpoints returned HTTP 404 / RPC -32001, correctly classified with CLI exit 1; no new transactions",
+        "testCount": 33
+      }
+    },
+    {
+      "id": "C05",
+      "title": "ERMAC 선행 조건 진단",
+      "weight": 10,
+      "status": "done",
+      "acceptance": "Public command explains each missing, unknown, non-executable or wrong-owner prerequisite separately; fixture tests; no creation or signing; public evidence.",
+      "completedAt": "2026-10-20T10:09:29.058Z",
+      "evidence": {
+        "commitUrl": "https://github.com/gnoesy/rialo-contribution-runner/commit/ef4717c90ffce53b04a16e486660c167095f8518",
+        "artifactUrl": "https://github.com/gnoesy/rialo-contribution-runner/blob/ef4717c90ffce53b04a16e486660c167095f8518/reports/2026-10-20-c05-diagnostic.json",
+        "tests": "41/41 offline tests passed; both Devnet diagnostics distinguish missing programs/registry and unknown ownership; no signing or creation",
+        "testCount": 41
+      }
+    },
+    {
+      "id": "C06",
+      "title": "ERMAC 명령 직렬화 검증",
+      "weight": 10,
+      "status": "done",
+      "acceptance": "Compare serialized instruction layout against the pinned public app with deterministic fixtures; negative cases for changed hash or invalid inputs; public reproducible report, without claiming live feed success.",
+      "completedAt": "2026-10-20T11:13:03.772Z",
+      "evidence": {
+        "commitUrl": "https://github.com/gnoesy/rialo-contribution-runner/commit/e7b45fcee8300a72818cf1b18176c056c62b11b2",
+        "artifactUrl": "https://github.com/gnoesy/rialo-contribution-runner/blob/e7b45fcee8300a72818cf1b18176c056c62b11b2/reports/2026-10-20-c06-wire.json",
+        "tests": "48/48 tests passed; unsigned 36/243-byte instructions match manually transcribed hash-verified app layout; negative mutation/input cases pass; no live feed submission",
+        "testCount": 48
+      }
+    },
+    {
+      "id": "C07",
+      "title": "AGP 일정 변경 감지",
+      "weight": 10,
+      "status": "done",
+      "acceptance": "Fixture-driven added/removed/changed schedule comparison; empty agenda distinguished from fetch failure; no registration/betting; public command and tests.",
+      "completedAt": "2026-10-20T12:18:04.931Z",
+      "evidence": {
+        "commitUrl": "https://github.com/gnoesy/rialo-contribution-runner/commit/ec1525ef55ea480520b8dc3dcb7f75440f2e6a95",
+        "artifactUrl": "https://github.com/gnoesy/rialo-contribution-runner/blob/ec1525ef55ea480520b8dc3dcb7f75440f2e6a95/reports/2026-10-20-c07-agenda.json",
+        "tests": "57/57 tests passed; synthetic add/remove/change and failure recovery verified; public-only runner initialized empty agenda and live follow-up stayed unchanged; no registration or betting",
+        "testCount": 57
+      }
+    },
+    {
+      "id": "C08",
+      "title": "깨끗한 환경의 자동 테스트",
+      "weight": 10,
+      "status": "done",
+      "acceptance": "GitHub workflow runs offline tests on clean Node 22 install with no secrets/wallet/network writes; actual successful run URL recorded. Existing live worker stays untouched.",
+      "completedAt": "2026-10-22T03:35:50.290Z",
+      "evidence": {
+        "commitUrl": "https://github.com/gnoesy/rialo-contribution-runner/commit/c1c3fb1d3b1cc8ae5231ca7382153246abff8b26",
+        "artifactUrl": "https://github.com/gnoesy/rialo-contribution-runner/blob/c1c3fb1d3b1cc8ae5231ca7382153246abff8b26/.github/workflows/offline-ci.yml",
+        "ciRunUrl": "https://github.com/gnoesy/rialo-contribution-runner/actions/runs/39717574082",
+        "tests": "GitHub Ubuntu 24.04 / Node 22.23.3: 57 tests and five offline CLI checks passed with loopback-only networking; no wallet or live RPC",
+        "testCount": 57
+      }
+    },
+    {
+      "id": "C09",
+      "title": "한·영 개발자 가이드와 접수 경로",
+      "weight": 10,
+      "status": "done",
+      "acceptance": "English/Korean guide verified from a clean checkout; accurate supported/unsupported operations; official submission/contact routes checked with URLs and dates, inaccessible routes labelled; no messages sent.",
+      "completedAt": "2026-10-20T13:14:10.997Z",
+      "evidence": {
+        "commitUrl": "https://github.com/gnoesy/rialo-contribution-runner/commit/95faa5a11ba417c92d3f13d19d3e3711cf069b51",
+        "artifactUrl": "https://github.com/gnoesy/rialo-contribution-runner/blob/95faa5a11ba417c92d3f13d19d3e3711cf069b51/reports/2026-10-20-c09-quickstart.json",
+        "tests": "Clean public clone on Node 22.22.0: 57/57 tests and five documented offline CLI examples passed; official entry/contact URLs checked with access limits; no messages sent",
+        "testCount": 57
+      }
+    },
+    {
+      "id": "C10",
+      "title": "버전별 개발 도구 배포",
+      "weight": 10,
+      "status": "done",
+      "acceptance": "Review all units, run relevant suite in clean checkout, publish reproducible version/tag and changelog in the existing repository, confirm remote artifacts; document remaining upstream acceptance and reward uncertainty.",
+      "completedAt": "2026-10-22T04:11:44.293Z",
+      "evidence": {
+        "commitUrl": "https://github.com/gnoesy/rialo-contribution-runner/commit/aee88352ea3c60c1082fb91b6cac70d9584424ea",
+        "artifactUrl": "https://github.com/gnoesy/rialo-contribution-runner/releases/tag/v1.0.0",
+        "ciRunUrl": "https://github.com/gnoesy/rialo-contribution-runner/actions/runs/39720814841",
+        "tests": "57 tests and five offline CLI checks passed in a clean checkout, extracted release archive and isolated GitHub CI; remote tag and downloaded archive/checksum verified",
+        "testCount": 57
+      }
+    }
+  ],
+  "status": "completed",
+  "completedAt": "2026-10-22T04:11:44.293Z",
+  "releaseUrl": "https://github.com/gnoesy/rialo-contribution-runner/releases/tag/v1.0.0",
+  "nextCycle": {
+    "state": "awaiting_verified_need",
+    "reason": "No further independent work unit has been established. Reopen on a reproducible defect, official SDK/protocol change or newly available public program/participation requirements; retain completed cycle 1."
+  }
+}

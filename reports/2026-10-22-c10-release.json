@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "unit": "C10",
+  "checkedAt": "2026-10-22T04:11:44.293Z",
+  "version": "1.0.0",
+  "tag": "v1.0.0",
+  "tagObject": "85489a124e36cdf405c7fdf31eee58e7056c2f8a",
+  "sourceCommit": "aee88352ea3c60c1082fb91b6cac70d9584424ea",
+  "sourceCommitUrl": "https://github.com/gnoesy/rialo-contribution-runner/commit/aee88352ea3c60c1082fb91b6cac70d9584424ea",
+  "releaseUrl": "https://github.com/gnoesy/rialo-contribution-runner/releases/tag/v1.0.0",
+  "ciRunUrl": "https://github.com/gnoesy/rialo-contribution-runner/actions/runs/39720814841",
+  "ciConclusion": "success",
+  "ciCompletedAt": "2026-10-22T04:09:59Z",
+  "ciNode": "22.23.3",
+  "localNode": "22.22.0",
+  "testsPassed": 57,
+  "cliChecksPassed": 5,
+  "validation": [
+    "Clean source checkout with locked dependencies",
+    "Actual extracted release archive with locked dependencies",
+    "Exact release commit in loopback-only GitHub CI",
+    "Two independent archive builds byte-identical",
+    "Published assets downloaded and compared byte-for-byte",
+    "All nine prior completed source commits verified ancestors of remote main"
+  ],
+  "archive": {
+    "sourceCommit": "aee88352ea3c60c1082fb91b6cac70d9584424ea",
+    "filename": "rialo-contribution-runner-v1.0.0.tar.gz",
+    "sha256": "dbdda43cd6da86e508874175201f53da60281d785a514311cc135e272f3aafb2",
+    "bytes": 65194,
+    "repeatBuildIdentical": true,
+    "fileCount": 57,
+    "excludedPrivateState": true,
+    "gitVersion": "git version 2.54.0 (Apple Git-157)",
+    "gzipVersion": "Apple gzip 487.0.1",
+    "remoteDownloadVerified": true,
+    "downloadVerifiedAt": "2026-10-22T04:11:09.761522+00:00"
+  },
+  "reviewedPriorUnits": [
+    {
+      "id": "C01",
+      "commitUrl": "https://github.com/gnoesy/rialo-contribution-runner/commit/0834700079ed6cd547235e6707f6acb3f3027623",
+      "remoteAncestryVerified": true
+    },
+    {
+      "id": "C02",
+      "commitUrl": "https://github.com/gnoesy/rialo-contribution-runner/commit/3bff645197a4aa7bca5f7c0a1faf67176e79b421",
+      "remoteAncestryVerified": true
+    },
+    {
+      "id": "C03",
+      "commitUrl": "https://github.com/gnoesy/rialo-contribution-runner/commit/1b3fea72802fadf45d16c1599a56e03b9f6eb845",
+      "remoteAncestryVerified": true
+    },
+    {
+      "id": "C04",
+      "commitUrl": "https://github.com/gnoesy/rialo-contribution-runner/commit/876b96967d5fc3d9183a08c68f767ad759ca5bad",
+      "remoteAncestryVerified": true
+    },
+    {
+      "id": "C05",
+      "commitUrl": "https://github.com/gnoesy/rialo-contribution-runner/commit/ef4717c90ffce53b04a16e486660c167095f8518",
+      "remoteAncestryVerified": true
+    },
+    {
+      "id": "C06",
+      "commitUrl": "https://github.com/gnoesy/rialo-contribution-runner/commit/e7b45fcee8300a72818cf1b18176c056c62b11b2",
+      "remoteAncestryVerified": true
+    },
+    {
+      "id": "C07",
+      "commitUrl": "https://github.com/gnoesy/rialo-contribution-runner/commit/ec1525ef55ea480520b8dc3dcb7f75440f2e6a95",
+      "remoteAncestryVerified": true
+    },
+    {
+      "id": "C08",
+      "commitUrl": "https://github.com/gnoesy/rialo-contribution-runner/commit/c1c3fb1d3b1cc8ae5231ca7382153246abff8b26",
+      "remoteAncestryVerified": true
+    },
+    {
+      "id": "C09",
+      "commitUrl": "https://github.com/gnoesy/rialo-contribution-runner/commit/95faa5a11ba417c92d3f13d19d3e3711cf069b51",
+      "remoteAncestryVerified": true
+    }
+  ],
+  "privateConfigIncluded": false,
+  "walletLoaded": false,
+  "newTransactions": 0,
+  "officialContributionAcceptance": "unverified",
+  "rewardStatus": "unverified",
+  "limits": [
+    "Historical receipt availability is not guaranteed; no resubmission",
+    "Live ERMAC feed execution remains blocked by missing programs/registry",
+    "Protected docs and official submission channels remain unverified",
+    "Annotated tag is not cryptographically signed"
+  ]
+}

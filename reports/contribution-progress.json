@@ -2,19 +2,19 @@
   "schemaVersion": 1,
   "cycle": 1,
   "title": "Rialo 개발자 도구 기여",
-  "updatedAt": "2026-10-22T03:35:50.290Z",
+  "updatedAt": "2026-10-22T04:11:44.293Z",
   "cadence": {
     "timezone": "Asia/Seoul",
     "minute": 10,
     "targetUnitsPerRun": 1,
     "targetPercentagePoints": 10
   },
-  "completedUnits": 9,
+  "completedUnits": 10,
   "totalUnits": 10,
-  "progressPercent": 90,
+  "progressPercent": 100,
   "contributionAcceptance": "unverified",
   "rewardStatus": "unverified",
-  "nextTaskId": "C10",
+  "nextTaskId": null,
   "tasks": [
     {
       "id": "C01",
@@ -147,8 +147,23 @@
       "id": "C10",
       "title": "버전별 개발 도구 배포",
       "weight": 10,
-      "status": "queued",
-      "acceptance": "Review all units, run relevant suite in clean checkout, publish reproducible version/tag and changelog in the existing repository, confirm remote artifacts; document remaining upstream acceptance and reward uncertainty."
+      "status": "done",
+      "acceptance": "Review all units, run relevant suite in clean checkout, publish reproducible version/tag and changelog in the existing repository, confirm remote artifacts; document remaining upstream acceptance and reward uncertainty.",
+      "completedAt": "2026-10-22T04:11:44.293Z",
+      "evidence": {
+        "commitUrl": "https://github.com/gnoesy/rialo-contribution-runner/commit/aee88352ea3c60c1082fb91b6cac70d9584424ea",
+        "artifactUrl": "https://github.com/gnoesy/rialo-contribution-runner/releases/tag/v1.0.0",
+        "ciRunUrl": "https://github.com/gnoesy/rialo-contribution-runner/actions/runs/39720814841",
+        "tests": "57 tests and five offline CLI checks passed in a clean checkout, extracted release archive and isolated GitHub CI; remote tag and downloaded archive/checksum verified",
+        "testCount": 57
+      }
     }
-  ]
+  ],
+  "status": "completed",
+  "completedAt": "2026-10-22T04:11:44.293Z",
+  "releaseUrl": "https://github.com/gnoesy/rialo-contribution-runner/releases/tag/v1.0.0",
+  "nextCycle": {
+    "state": "awaiting_verified_need",
+    "reason": "No further independent work unit has been established. Reopen on a reproducible defect, official SDK/protocol change or newly available public program/participation requirements; retain completed cycle 1."
+  }
 }
