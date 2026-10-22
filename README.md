@@ -9,6 +9,14 @@ Start with the verified clean-checkout guide:
 It includes supported commands and checked official contact routes, with
 inaccessible submission channels labelled explicitly. [GitHub CI passed](https://github.com/gnoesy/rialo-contribution-runner/actions/runs/39717574082): 57 tests and five offline CLI checks in a loopback-only network namespace.
 
+## Versioned toolkit
+
+The first version is **v1.0.0** (Node 22, SDK 0.18.1).
+[Release and checksum downloads](https://github.com/gnoesy/rialo-contribution-runner/releases/tag/v1.0.0) ·
+[Changelog](CHANGELOG.md) · [Reproduce and verify the release](docs/RELEASE.md).
+The source archive contains only tracked repository files. Installation and
+offline verification do not require a wallet; no npm package is published.
+
 ## Current evidence
 
 - [Latest automated status](reports/latest.json): public Devnet/Testnet RPC health, ERMAC program availability and AGP upcoming-race count.
@@ -18,7 +26,7 @@ inaccessible submission channels labelled explicitly. [GitHub CI passed](https:/
 
 ## Run without a wallet
 
-Node.js 22 or later:
+Node.js 22:
 
 ```sh
 npm ci --ignore-scripts
