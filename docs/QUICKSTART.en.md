@@ -93,6 +93,4 @@ URLs and access states. No external issue, comment or message was sent.
 - This quickstart does not load wallets, register, sign, transfer, bet, claim,
   link accounts or bypass access controls.
 - Synthetic fixtures, test tokens and toolkit progress are not official points.
-- GitHub CI (C08) is incomplete: the current connection lacks `workflow` write
-  scope and its upload was rejected. Successful local checks are not presented
-  as a successful GitHub run.
+- [GitHub CI (C08) passed](https://github.com/gnoesy/rialo-contribution-runner/actions/runs/39717574082): 57 tests and five offline CLI checks. External networking is disabled during tests; no wallet or secrets are loaded.

@@ -7,8 +7,7 @@ A reproducible SDK integration probe and readiness monitor for Rialo developers.
 Start with the verified clean-checkout guide:
 [한국어](docs/QUICKSTART.ko.md) · [English](docs/QUICKSTART.en.md).
 It includes supported commands and checked official contact routes, with
-inaccessible submission channels labelled explicitly. GitHub CI remains pending
-workflow-write authorization; no successful CI run is claimed.
+inaccessible submission channels labelled explicitly. [GitHub CI passed](https://github.com/gnoesy/rialo-contribution-runner/actions/runs/39717574082): 57 tests and five offline CLI checks in a loopback-only network namespace.
 
 ## Current evidence
 
@@ -167,6 +166,32 @@ An explicit `status` change to `cancelled` is reported as a changed field.
 Public schedules do not establish personalized eligibility, rewards or a safe
 betting strategy. [Schema provenance and verification](reports/2026-10-20-c07-agenda.json)
 separate synthetic change cases from observed live empty agendas.
+
+## Clean-checkout CI
+
+[Offline Node 22 checks](https://github.com/gnoesy/rialo-contribution-runner/actions/workflows/offline-ci.yml)
+runs on source/test changes and pull requests. Checkout and Node setup actions
+are pinned to commit SHAs. The job uses read-only repository permissions,
+does not persist checkout credentials, and references no repository secrets.
+
+Dependencies are installed from the lockfile with lifecycle scripts, audit and
+funding requests disabled. Tests and five offline CLI examples then run in an
+isolated Linux network namespace with only loopback enabled and a cleared
+environment. Loopback is necessary for the recorded RPC parser reproduction;
+public RPCs, faucets and other external endpoints are unreachable during tests.
+Setup/dependency downloads happen before isolation.
+
+To reproduce locally in a **clean checkout**, with Node 22:
+
+```sh
+npm ci --ignore-scripts --no-audit --no-fund
+node scripts/check-offline.mjs
+```
+
+The script refuses a checkout containing local wallet configuration or the
+live transaction ledger. It runs the test suite and offline fixture commands;
+local network isolation is not automatically provided by the script. The
+existing Mac mini monitor and its configuration are unaffected by this CI job.
 
 ## Optional bounded Devnet integration
 

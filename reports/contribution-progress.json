@@ -2,19 +2,19 @@
   "schemaVersion": 1,
   "cycle": 1,
   "title": "Rialo 개발자 도구 기여",
-  "updatedAt": "2026-10-20T13:14:10.997Z",
+  "updatedAt": "2026-10-22T03:35:50.290Z",
   "cadence": {
     "timezone": "Asia/Seoul",
     "minute": 10,
     "targetUnitsPerRun": 1,
     "targetPercentagePoints": 10
   },
-  "completedUnits": 8,
+  "completedUnits": 9,
   "totalUnits": 10,
-  "progressPercent": 80,
+  "progressPercent": 90,
   "contributionAcceptance": "unverified",
   "rewardStatus": "unverified",
-  "nextTaskId": "C08",
+  "nextTaskId": "C10",
   "tasks": [
     {
       "id": "C01",
@@ -118,12 +118,15 @@
       "id": "C08",
       "title": "깨끗한 환경의 자동 테스트",
       "weight": 10,
-      "status": "blocked",
+      "status": "done",
       "acceptance": "GitHub workflow runs offline tests on clean Node 22 install with no secrets/wallet/network writes; actual successful run URL recorded. Existing live worker stays untouched.",
-      "blocker": {
-        "checkedAt": "2026-10-20T13:14:10.997Z",
-        "reason": "GitHub rejected workflow creation because current OAuth connection lacks workflow scope.",
-        "resolution": "User authorization for workflow-write access is required; local implementation and tests are preserved. No successful GitHub CI run yet."
+      "completedAt": "2026-10-22T03:35:50.290Z",
+      "evidence": {
+        "commitUrl": "https://github.com/gnoesy/rialo-contribution-runner/commit/c1c3fb1d3b1cc8ae5231ca7382153246abff8b26",
+        "artifactUrl": "https://github.com/gnoesy/rialo-contribution-runner/blob/c1c3fb1d3b1cc8ae5231ca7382153246abff8b26/.github/workflows/offline-ci.yml",
+        "ciRunUrl": "https://github.com/gnoesy/rialo-contribution-runner/actions/runs/39717574082",
+        "tests": "GitHub Ubuntu 24.04 / Node 22.23.3: 57 tests and five offline CLI checks passed with loopback-only networking; no wallet or live RPC",
+        "testCount": 57
       }
     },
     {
@@ -144,15 +147,8 @@
       "id": "C10",
       "title": "버전별 개발 도구 배포",
       "weight": 10,
-      "status": "blocked",
-      "acceptance": "Review all units, run relevant suite in clean checkout, publish reproducible version/tag and changelog in the existing repository, confirm remote artifacts; document remaining upstream acceptance and reward uncertainty.",
-      "blocker": {
-        "checkedAt": "2026-10-20T13:14:10.997Z",
-        "reason": "Final release requires completed C08 and a verified GitHub CI run.",
-        "dependsOn": [
-          "C08"
-        ]
-      }
+      "status": "queued",
+      "acceptance": "Review all units, run relevant suite in clean checkout, publish reproducible version/tag and changelog in the existing repository, confirm remote artifacts; document remaining upstream acceptance and reward uncertainty."
     }
   ]
 }
