@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
-  "checkedAt": "2026-10-24T08:51:17.462Z",
+  "checkedAt": "2026-10-24T19:23:37.409Z",
   "networks": [
     {
       "url": "https://devnet.rialo.io:4101",
       "health": "ok",
-      "height": "2278139",
+      "height": "2531237",
       "configHash": "7835909609297272857",
-      "latencyMs": 1956,
+      "latencyMs": 1861,
       "programs": {
         "medianAggregatorId": {
           "address": "M4tvfJkVtzhBozkywmG45xfvBJhVqJghqSuxjEKY6Mx",
@@ -30,9 +30,9 @@
     {
       "url": "https://devnet.rialo.io",
       "health": "ok",
-      "height": "2278139",
+      "height": "2531236",
       "configHash": "7835909609297272857",
-      "latencyMs": 1846,
+      "latencyMs": 1826,
       "programs": {
         "medianAggregatorId": {
           "address": "M4tvfJkVtzhBozkywmG45xfvBJhVqJghqSuxjEKY6Mx",
@@ -55,9 +55,9 @@
     {
       "url": "https://testnet.rialo.io:4101",
       "health": "ok",
-      "height": "2297022",
+      "height": "2554573",
       "configHash": "13223746993924564309",
-      "latencyMs": 1874,
+      "latencyMs": 1840,
       "programs": {
         "medianAggregatorId": {
           "address": "M4tvfJkVtzhBozkywmG45xfvBJhVqJghqSuxjEKY6Mx",
@@ -96,10 +96,8 @@
     "publishedAt": "2026-08-18T22:38:00.567Z"
   },
   "ermacBundle": {
-    "state": "verified_public_asset",
-    "url": "https://ermac.rialo.io/assets/frost-public-key-tgtsfZiz.js",
-    "sha256": "2e5fc8a9ab654d4ca2067c70d14789da15e17e7656984fa9ff5d9560396890ac",
-    "matchesPinned": true
+    "state": "unverified",
+    "error": "The operation was aborted due to timeout"
   },
   "canary": {
     "state": "verified",
@@ -107,7 +105,7 @@
     "estimatedFeeKelvin": "0"
   },
   "participation": {
-    "state": "blocked_programs_unavailable"
+    "state": "blocked_protocol_changed_or_unverified"
   },
   "rewardStatus": "unverified: test tokens and SDK checks are not Rialo Points or an airdrop entitlement"
 }
