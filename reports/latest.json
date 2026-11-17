@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
-  "checkedAt": "2026-10-30T20:22:28.510Z",
+  "checkedAt": "2026-11-17T05:58:07.271Z",
   "networks": [
     {
       "url": "https://devnet.rialo.io:4101",
       "health": "ok",
-      "height": "5753878",
+      "height": "15964650",
       "configHash": "7835909609297272857",
-      "latencyMs": 2214,
+      "latencyMs": 3976,
       "programs": {
         "medianAggregatorId": {
           "address": "M4tvfJkVtzhBozkywmG45xfvBJhVqJghqSuxjEKY6Mx",
@@ -30,9 +30,9 @@
     {
       "url": "https://devnet.rialo.io",
       "health": "ok",
-      "height": "5753879",
+      "height": "15964650",
       "configHash": "7835909609297272857",
-      "latencyMs": 2299,
+      "latencyMs": 3875,
       "programs": {
         "medianAggregatorId": {
           "address": "M4tvfJkVtzhBozkywmG45xfvBJhVqJghqSuxjEKY6Mx",
@@ -55,9 +55,9 @@
     {
       "url": "https://testnet.rialo.io:4101",
       "health": "ok",
-      "height": "6098764",
+      "height": "14256718",
       "configHash": "13223746993924564309",
-      "latencyMs": 2293,
+      "latencyMs": 1596,
       "programs": {
         "medianAggregatorId": {
           "address": "M4tvfJkVtzhBozkywmG45xfvBJhVqJghqSuxjEKY6Mx",
@@ -92,8 +92,8 @@
   "sdk": {
     "state": "verified_registry",
     "installed": "0.18.1",
-    "latest": "0.18.1",
-    "publishedAt": "2026-08-18T22:38:00.567Z"
+    "latest": "0.24.0",
+    "publishedAt": "2026-11-10T13:46:34.018Z"
   },
   "ermacBundle": {
     "state": "verified_public_asset",
