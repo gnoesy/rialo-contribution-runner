@@ -1,63 +1,19 @@
 {
   "schemaVersion": 1,
-  "checkedAt": "2026-11-25T11:30:57.113Z",
+  "checkedAt": "2026-11-26T09:54:10.258Z",
   "networks": [
     {
-      "url": "https://devnet.rialo.io:4101",
-      "health": "ok",
-      "height": "20785499",
-      "configHash": "7835909609297272857",
-      "latencyMs": 2595,
-      "programs": {
-        "medianAggregatorId": {
-          "address": "M4tvfJkVtzhBozkywmG45xfvBJhVqJghqSuxjEKY6Mx",
-          "state": "absent"
-        },
-        "registryProgramId": {
-          "address": "3nmnQVAgKaBrWiauqdEwoSqa8rVACjEbZVcGH5VeVn62",
-          "state": "absent"
-        },
-        "subscriberProgramId": {
-          "address": "95uDFDmcDHB32zpBzfaaXhmVNeJ5PAt2FaFw4nPknuho",
-          "state": "absent"
-        },
-        "globalIndex": {
-          "address": "3UBDAjfooL8e64tTRtJAgP9RXj15qfZx1TZ2faLKz35y",
-          "state": "absent"
-        }
-      }
+      "health": "unverified"
     },
     {
-      "url": "https://devnet.rialo.io",
-      "health": "ok",
-      "height": "20785500",
-      "configHash": "7835909609297272857",
-      "latencyMs": 2518,
-      "programs": {
-        "medianAggregatorId": {
-          "address": "M4tvfJkVtzhBozkywmG45xfvBJhVqJghqSuxjEKY6Mx",
-          "state": "absent"
-        },
-        "registryProgramId": {
-          "address": "3nmnQVAgKaBrWiauqdEwoSqa8rVACjEbZVcGH5VeVn62",
-          "state": "absent"
-        },
-        "subscriberProgramId": {
-          "address": "95uDFDmcDHB32zpBzfaaXhmVNeJ5PAt2FaFw4nPknuho",
-          "state": "absent"
-        },
-        "globalIndex": {
-          "address": "3UBDAjfooL8e64tTRtJAgP9RXj15qfZx1TZ2faLKz35y",
-          "state": "absent"
-        }
-      }
+      "health": "unverified"
     },
     {
       "url": "https://testnet.rialo.io:4101",
       "health": "ok",
-      "height": "18569586",
+      "height": "19212951",
       "configHash": "13223746993924564309",
-      "latencyMs": 2457,
+      "latencyMs": 2264,
       "programs": {
         "medianAggregatorId": {
           "address": "M4tvfJkVtzhBozkywmG45xfvBJhVqJghqSuxjEKY6Mx",
