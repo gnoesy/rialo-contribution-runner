@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
-  "checkedAt": "2026-11-26T10:09:18.019Z",
+  "checkedAt": "2026-11-27T10:16:09.250Z",
   "networks": [
     {
       "url": "https://devnet.rialo.io:4101",
       "health": "ok",
-      "height": "4230",
+      "height": "597404",
       "configHash": "999600391772266129",
-      "latencyMs": 2236,
+      "latencyMs": 2734,
       "programs": {
         "medianAggregatorId": {
           "address": "M4tvfJkVtzhBozkywmG45xfvBJhVqJghqSuxjEKY6Mx",
@@ -30,9 +30,9 @@
     {
       "url": "https://devnet.rialo.io",
       "health": "ok",
-      "height": "4226",
+      "height": "597404",
       "configHash": "999600391772266129",
-      "latencyMs": 2081,
+      "latencyMs": 2406,
       "programs": {
         "medianAggregatorId": {
           "address": "M4tvfJkVtzhBozkywmG45xfvBJhVqJghqSuxjEKY6Mx",
@@ -55,9 +55,9 @@
     {
       "url": "https://testnet.rialo.io:4101",
       "health": "ok",
-      "height": "19220211",
+      "height": "19911849",
       "configHash": "13223746993924564309",
-      "latencyMs": 2363,
+      "latencyMs": 2613,
       "programs": {
         "medianAggregatorId": {
           "address": "M4tvfJkVtzhBozkywmG45xfvBJhVqJghqSuxjEKY6Mx",
